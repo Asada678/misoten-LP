@@ -76,7 +76,6 @@ section .content {
 .banner .concept {
   position: relative;
   z-index: 100;
-  margin-top: 200px;
   padding-left: 50px;
   color: #fff;
   font-weight: 900;
