@@ -30,8 +30,6 @@ h2 {
 
 section {
   position: relative;
-  width: 100%;
-  padding: 50px 0;
   text-align: center;
   background-color: orange;
 }
