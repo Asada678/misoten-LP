@@ -21,17 +21,23 @@ class Main {
   get observers() {
     return this._observers;
   }
-  
+
   _init() {
     this._scrollInit();
     new fullpage('#container', {
-      autoScrolling: true
+      autoScrolling: true,
+      navigation: true,
+      anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8',],
+      navigationTooltips: ['Home', 'Purpose', 'Features', 'Coach', 'SNS', 'Team', 'Technologies', 'Footer'],
+      showActiveTooltip: true,
+      controlArrows: false,
+      slidesNavigation: true
     })
     // new MobileMenu();
     // this.hero = new HeroSlider('.swiper-container');
     // Pace.on('done', this._paceDone.bind(this));
   }
-  
+
   _paceDone() {
     this._scrollInit();
   }
@@ -43,7 +49,7 @@ class Main {
       this.header.classList.add('triggered');
     }
   }
-  
+
   _inviewAnimation(el, inview) {
     if (inview) {
       el.classList.add('inview');
@@ -51,7 +57,7 @@ class Main {
       el.classList.remove('inview');
     }
   }
-  
+
   _textAnimation(el, inview) {
     if (inview) {
       const ta = new TweenTextAnimation(el);
@@ -84,7 +90,7 @@ class Main {
   destroy() {
     this._destroyObservers();
   }
-  
+
   _scrollInit() {
     // this.observers = new ScrollObserver('.header', this._inviewAnimation, { once: false});
     this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false });
