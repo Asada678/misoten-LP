@@ -1,0 +1,79 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+#container {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  padding: 50px 0;
+
+  .content {
+    position: relative;
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 60px;
+  transition: 0.5s;
+
+  &.triggered {
+    background-color: rgba($color: orange, $alpha: 0.6);
+  }
+}
+
+.banner {
+  // background-image: url("../../images/abs-1850926_1920-2.jpg");
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  background-size: cover;
+  min-height: 100vh;
+
+  &__img {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .concept {
+    position: absolute;
+    right: 0;
+    color: orange;
+    font-weight: 900;
+
+    span {
+      font-size: 20px;
+    }
+    small {
+      font-size: 5px;
+    }
+  }
+}
