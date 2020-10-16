@@ -21,15 +21,7 @@ h2 {
   font-size: 40px;
 }
 
-#container {
-  position: relative;
-  z-index: 100;
-  width: 100%;
-  height: 100vh;
-}
-
 section {
-  position: relative;
   text-align: center;
   background-color: orange;
 }
@@ -61,10 +53,8 @@ section .content {
 }
 
 .banner {
-  min-height: 100vh;
   background: linear-gradient(45deg, #c86800 10%, #dde427 51%, #c87c00 90%);
   background: linear-gradient(315deg, #c86800 10%, rgba(217, 238, 36, 0.5) 48%, #c87c00 90%);
-  background-size: cover;
 }
 
 .banner::before {
@@ -82,20 +72,6 @@ section .content {
   opacity: 0.3;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
-}
-
-.banner__img {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  height: 100%;
-}
-
-.banner__img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .banner .concept {
