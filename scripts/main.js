@@ -1,8 +1,10 @@
 'use strict';
 
+// const fullpage = require("./vendors/fullpage");
+
 document.addEventListener('DOMContentLoaded', function () {
   const main = new Main();
-  console.log('main:', main);
+  // console.log('main:', main);
 });
 
 class Main {
@@ -22,6 +24,9 @@ class Main {
   
   _init() {
     this._scrollInit();
+    new fullpage('#container', {
+      autoScrolling: true
+    })
     // new MobileMenu();
     // this.hero = new HeroSlider('.swiper-container');
     // Pace.on('done', this._paceDone.bind(this));
@@ -81,10 +86,10 @@ class Main {
   }
   
   _scrollInit() {
-
     // this.observers = new ScrollObserver('.header', this._inviewAnimation, { once: false});
     this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false });
-    console.log('this._observers:', this._observers);
+    console.log('this:', this);
+    // console.log('this._observers:', this._observers);
     // this.observers = new ScrollObserver('.cover-slide', this._inviewAnimation);
     // this.observers = new ScrollObserver('.tween-animate-title', this._textAnimation);
     // this.observers = new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false});

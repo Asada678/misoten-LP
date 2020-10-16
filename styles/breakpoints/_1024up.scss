@@ -1,25 +1,25 @@
 /******************************************************************
 
-Stylesheet: 480px以上(スマホの横向き)のモニタで適用
+Stylesheet: 1024px以上のモニタで適用
 
 ******************************************************************/
 
 .banner {
   .concept {
-    span {
-      font-size: 45px;
 
-      &.break.first {
-        display: inline;
-      }
+    span {
+      font-size: 60px;
+
+      
     }
     small {
-      font-size: 28px;
+      font-size: 30px;
     }
   }
   .title {
     span {
-      font-size: 80px;
+      margin-right: 20px;
+      font-size: 130px;
     }
   }
 }
