@@ -3,15 +3,16 @@
 Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 
 ******************************************************************/
+span {
+  &.break.first {
+    display: inline;
+  }
+}
 
 .banner {
   .concept {
     span {
       font-size: 45px;
-
-      &.break.first {
-        display: inline;
-      }
     }
     small {
       font-size: 28px;

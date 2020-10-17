@@ -2,8 +2,28 @@
 .logo, .header__inner h2, .banner .title span {
   font-weight: 900;
   font-style: italic;
-  -webkit-filter: drop-shadow(-3px -3px 2px rgba(246, 247, 248, 0.4)) drop-shadow(5px 5px 5px rgba(246, 247, 248, 0.4)) drop-shadow(0px 15px 15px rgba(200, 104, 11, 0.8));
-          filter: drop-shadow(-3px -3px 2px rgba(246, 247, 248, 0.4)) drop-shadow(5px 5px 5px rgba(246, 247, 248, 0.4)) drop-shadow(0px 15px 15px rgba(200, 104, 11, 0.8));
+  -webkit-filter: drop-shadow(-3px -3px 2px rgba(255, 248, 253, 0.4)) drop-shadow(5px 5px 5px rgba(255, 248, 253, 0.4)) drop-shadow(0px 15px 15px rgba(255, 150, 66, 0.8));
+          filter: drop-shadow(-3px -3px 2px rgba(255, 248, 253, 0.4)) drop-shadow(5px 5px 5px rgba(255, 248, 253, 0.4)) drop-shadow(0px 15px 15px rgba(255, 150, 66, 0.8));
+}
+
+.section-before, .banner::before, .purpose::before {
+  content: "";
+  background-size: cover;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.fp-tableCell {
+  position: relative;
+  z-index: 100;
 }
 
 /******************************************************************
@@ -25,6 +45,10 @@ h2 {
   font-weight: 900;
 }
 
+span.break {
+  display: block;
+}
+
 section {
   position: relative;
   text-align: center;
@@ -33,9 +57,15 @@ section {
 
 section .content {
   position: relative;
+  z-index: 200;
   width: 100%;
   max-width: 1050px;
   margin: 0 auto;
+}
+
+section .content p {
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .header {
@@ -59,40 +89,24 @@ section .content {
 }
 
 .banner {
-  background: linear-gradient(315deg, #c86800 10%, rgba(217, 238, 36, 0.5) 48%, #c87c00 90%);
+  background: linear-gradient(315deg, #ff9642 10%, rgba(217, 238, 36, 0.5) 48%, #ff9642 90%);
 }
 
 .banner::before {
-  content: "";
-  background: url(../../images/banner-2.jpg) no-repeat center;
-  background-size: cover;
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  background: url(../../images/banner.jpg) no-repeat center;
 }
 
 .banner .concept {
   position: relative;
   z-index: 100;
   padding-left: 50px;
-  color: #fff;
+  color: #fff8fd;
   font-weight: 900;
   text-align: left;
 }
 
 .banner .concept span {
   font-size: 40px;
-}
-
-.banner .concept span.break {
-  display: block;
 }
 
 .banner .concept small {
@@ -102,7 +116,7 @@ section .content {
 .banner .title {
   position: relative;
   z-index: 100;
-  color: #212121;
+  color: #151515;
   width: 100%;
 }
 
@@ -112,17 +126,41 @@ section .content {
   font-size: 58px;
 }
 
+.purpose {
+  background-color: rgba(32, 32, 32, 0.6);
+  color: #fff8fd;
+}
+
+.purpose::before {
+  background: url(../../images/purpose.jpg) no-repeat center;
+  opacity: 0.7;
+}
+
+.purpose .content {
+  padding: 50px 0;
+}
+
+.purpose .content p {
+  margin: 20px 0;
+}
+
+.purpose .content .logo, .purpose .content .header__inner h2, .header__inner .purpose .content h2, .purpose .content .banner .title span, .banner .title .purpose .content span {
+  color: #151515;
+  font-size: 40px;
+  margin-right: 10px;
+}
+
 @media (min-width: 480px) {
   /******************************************************************
 
 Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 
 ******************************************************************/
+  span.break.first {
+    display: inline;
+  }
   .banner .concept span {
     font-size: 45px;
-  }
-  .banner .concept span.break.first {
-    display: inline;
   }
   .banner .concept small {
     font-size: 28px;
@@ -140,9 +178,6 @@ Stylesheet: 767px以上のタブレットやモニタで適用
 ******************************************************************/
   .banner .concept span {
     font-size: 55px;
-  }
-  .banner .concept span.break {
-    display: block;
   }
   .banner .concept small {
     font-size: 30px;
