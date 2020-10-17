@@ -30,6 +30,9 @@ span {
   &.break {
     display: block;
   }
+  &.number {
+    font-size: 45px;
+  }
 }
 
 .section {

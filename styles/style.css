@@ -259,6 +259,10 @@ span.break {
   display: block;
 }
 
+span.number {
+  font-size: 45px;
+}
+
 .section {
   position: relative;
   text-align: center;
