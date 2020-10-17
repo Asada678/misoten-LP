@@ -17,7 +17,7 @@
     &.inview {
       opacity: 1;
 
-      .arrow{
+      .arrow {
         &.down {
           transform-origin: top;
           animation: down 2s linear infinite;
@@ -28,6 +28,12 @@
         }
       }
     }
+  }
+}
+
+.coach, .sns {
+  .arrow-container {
+    bottom: calc(5% + 17px);
   }
 }
 

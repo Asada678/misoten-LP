@@ -24,3 +24,24 @@ span {
     }
   }
 }
+
+.sns {
+
+
+  .content {
+    display: flex;
+    flex-direction: row;
+
+    .text {
+      flex-basis: 50%;
+      min-width: 375px;
+    }
+
+    .slide-img {
+      img {
+        width: 100%;
+
+      }
+    }
+  }
+}
