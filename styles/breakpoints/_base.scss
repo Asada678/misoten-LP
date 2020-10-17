@@ -39,7 +39,7 @@ span {
   &__heading {
     position: absolute;
     z-index: 300;
-fix    top: $headerHeight;
+    top: $headerHeight - 15px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -267,7 +267,7 @@ span.break {
 .section__heading {
   position: absolute;
   z-index: 300;
-  top: 60px;
+  top: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
