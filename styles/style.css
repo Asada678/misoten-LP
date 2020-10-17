@@ -331,7 +331,7 @@ span.break {
 }
 
 .section .content p {
-  margin: 20px 0;
+  margin: 10px 0;
   font-size: 28px;
   font-weight: 700;
 }
@@ -513,15 +513,31 @@ span.break {
           flex-direction: column;
 }
 
+.sns .content .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .sns .content .slide-img {
   padding: 10px;
-  background-color: rgba(255, 248, 253, 0.9);
 }
 
 .sns .content .slide-img img {
-  width: 100%;
   max-height: 200px;
+  padding: 10px;
   border-radius: 20px;
+  background-color: rgba(255, 248, 253, 0.9);
   -webkit-box-shadow: 0px -2px 10px -5px rgba(21, 21, 21, 0.6), 0px 5px 10px -5px rgba(21, 21, 21, 0.6);
           box-shadow: 0px -2px 10px -5px rgba(21, 21, 21, 0.6), 0px 5px 10px -5px rgba(21, 21, 21, 0.6);
   -o-object-fit: contain;
@@ -554,14 +570,25 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    height: 100%;
   }
   .sns .content .text {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     min-width: 375px;
   }
-  .sns .content .slide-img img {
+  .sns .content .slide-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
+    height: 100%;
   }
 }
 

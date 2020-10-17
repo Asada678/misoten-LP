@@ -87,7 +87,7 @@ span {
     margin: 0 auto;
 
     p {
-      margin: 20px 0;
+      margin: 10px 0;
       font-size: $fsP;
       font-weight: 700;
     }
@@ -273,14 +273,24 @@ span {
   .content {
     display: flex;
     flex-direction: column;
-
+    
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
     .slide-img {
+      
       padding: 10px;
-      background-color: rgba($white, 0.9);
       img {
-        width: 100%;
+        // width: 100%;
         max-height: 200px;
+        // max-height: calc(100% - 300px);
+        padding: 10px;
         border-radius: 20px;
+        background-color: rgba($white, 0.9);
         box-shadow: 0px -2px 10px -5px rgba($black, 0.6),
           0px 5px 10px -5px rgba($black, 0.6);
         object-fit: contain;
