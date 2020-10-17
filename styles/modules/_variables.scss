@@ -1,36 +1,41 @@
 $fsH2: 40px;
+$fsH3: 35px;
 $fsP: 28px;
+$arrowSize: 50px;
 
 $white: #fff8fd;
 $yellow: #ffe05d;
 $orange: #ff9642;
 $black: #151515;
 
-
 .logo {
-      font-weight: 900;
-      font-style: italic;
-      filter: drop-shadow(-3px -3px 2px rgba($white, 0.4))
-        drop-shadow(5px 5px 5px rgba($white, 0.4))
-        drop-shadow(0px 15px 15px rgba($orange, 0.8));
+  font-weight: 900;
+  font-style: italic;
+  filter: drop-shadow(-3px -3px 2px rgba($white, 0.4))
+    drop-shadow(5px 5px 5px rgba($white, 0.4))
+    drop-shadow(0px 15px 15px rgba($orange, 0.8));
 }
 
 .section-before {
-    content: "";
-    background-size: cover;
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    -webkit-transition: opacity 1s;
-    transition: opacity 1s;
+  content: "";
+  background-size: cover;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
-.fp-tableCell {
+.fp-tableCell,
+.fp-slides {
   position: relative;
-  z-index: 100;
+  z-index: 200 !important;
+}
+.fp-slidesNav {
+  z-index: 400 !important;
 }
