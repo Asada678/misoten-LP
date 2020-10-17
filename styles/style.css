@@ -343,7 +343,13 @@ section .content p {
 }
 
 .purpose .content {
-  padding: 0px 0;
+  padding: 0 5px;
+}
+
+.purpose .content .text {
+  padding: 10px 0;
+  background-color: rgba(21, 21, 21, 0.4);
+  border-radius: 20px;
 }
 
 .purpose .content .logo, .purpose .content .header__inner h2, .header__inner .purpose .content h2, .purpose .content .banner .title span, .banner .title .purpose .content span {
