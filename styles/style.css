@@ -579,7 +579,7 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
   .sns .content .text {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    min-width: 375px;
+    min-width: calc(375px + 5%);
   }
   .sns .content .slide-img {
     display: -webkit-box;

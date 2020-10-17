@@ -276,19 +276,18 @@ span {
   .content {
     display: flex;
     flex-direction: column;
-    
+
     .text {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
-    
+
     .slide-img {
-      
       padding: 10px;
+
       img {
-        // width: 100%;
         max-height: 180px;
         // max-height: calc(100% - 300px);
         padding: 10px;
