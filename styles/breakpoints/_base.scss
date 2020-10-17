@@ -215,7 +215,8 @@ span {
       }
 
       &.red {
-        height: 65%;
+        height: 60%;
+        padding-top: 10%;
         background-color: #ff414d;
         &:before {
           bottom: 0;
@@ -224,7 +225,7 @@ span {
         }
       }
       &.blue {
-        height: 35%;
+        height: 40%;
         background-color: #1a81b7;
         &:before {
           top: 0;
