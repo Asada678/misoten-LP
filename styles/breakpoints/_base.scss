@@ -15,6 +15,7 @@ Stylesheet: ベーススタイル
 
 h2,
 .heading {
+  position: relative;
   font-size: $fsH2;
   font-weight: 900;
 }
@@ -44,6 +45,38 @@ span {
     justify-content: center;
     align-items: center;
     width: 100%;
+
+    h2 {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 100vw;
+        height: 1px;
+        display: block;
+        background-color: #cfd8dc;
+        opacity: 0.6;
+        transition: transform 1.5s ease 0.2s;
+      }
+
+      &::before {
+        right: 120%;
+        transform: translateY(-50%) scaleX(0);
+        transform-origin: right;
+      }
+      &.inview::before {
+        transform: translateY(-50%);
+      }
+      &::after {
+        left: 120%;
+        transform: translateY(-50%) scaleX(0);
+        transform-origin: left;
+      }
+      &.inview::after {
+        transform: translateY(-50%);
+      }
+    }
   }
 
   .content {

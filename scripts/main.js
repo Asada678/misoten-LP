@@ -100,6 +100,7 @@ class Main {
     // this.observers = new ScrollObserver('.tween-animate-title', this._textAnimation);
     // this.observers = new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false});
     this.observers = new ScrollObserver('.appear', this._inviewAnimation);
+    this.observers = new ScrollObserver('.section__heading h2', this._inviewAnimation);
     this.observers = new ScrollObserver('.arrow-container', this._inviewAnimation, { once: false});
     // this.observers = new ScrollObserver('#main-content', this._sideAnimation.bind(this), {once: false, rootMargin: "-300px 0px"});
     // console.log('this.observers:', this.observers);
