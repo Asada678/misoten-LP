@@ -9,6 +9,13 @@ span {
   }
 }
 
+.section {
+
+  &__heading {
+    top: $headerHeight - 30px;
+  }
+}
+
 .banner {
   .concept {
     span {

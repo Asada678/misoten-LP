@@ -515,6 +515,7 @@ span.number {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #fff8fd;
 }
 
 .sns .content .text {
@@ -556,6 +557,9 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 ******************************************************************/
   span.break.first {
     display: inline;
+  }
+  .section__heading {
+    top: 30px;
   }
   .banner .concept span {
     font-size: 45px;
