@@ -227,7 +227,7 @@ span {
           align-items: center;
           // margin: 10px 0;
           padding: 10px;
-          border-bottom: 1px solid rgba($white, .1);
+          border-bottom: 1px solid rgba($white, 0.1);
           cursor: pointer;
           transform: translateX(100%);
           transition-duration: 0.3s;
@@ -442,15 +442,19 @@ span {
 
 .team {
   .content {
-    -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
+    // -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
+    max-width: 100%;
   }
   .member {
     position: relative;
     width: 100%;
     margin: 0 auto;
-    background: #333;
-    padding: 20px 40px;
+    background: rgba($black, 0.9);
+    padding: 10px 20px;
+    // border-radius: 20px;
     overflow: hidden;
+
+    transition: 0.3s;
 
     &:hover {
       .layer {
@@ -465,8 +469,12 @@ span {
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(255,150,66,0.9) 40%, rgba(21,21,21,0.9) 83%);
-      transition: .5s;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 150, 66, 0.9) 40%,
+        rgba(21, 21, 21, 0.9) 83%
+      );
+      transition: 0.5s;
     }
 
     .text {
@@ -483,10 +491,10 @@ span {
 
     .img-box {
       width: 100%;
-      height: 100px;
+      // height: 100px;
       margin: 0 auto;
       overflow: hidden;
-      
+
       img {
         border-radius: 50%;
         width: 80px;
