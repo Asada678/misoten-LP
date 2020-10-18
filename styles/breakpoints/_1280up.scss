@@ -3,3 +3,50 @@
 Stylesheet: 1280px以上のモニタで適用
 
 ******************************************************************/
+
+h2,
+.heading {
+  font-size: 65px;
+}
+h3 {
+  font-size: 54px;
+}
+span.number {
+  font-size: 70px;
+}
+
+.section .content p {
+  font-size: 36px;
+}
+
+.banner {
+  .concept {
+    span {
+      font-size: 70px;
+
+    }
+    small {
+      font-size: 35px;
+    }
+  }
+  .title {
+    span {
+      font-size: 140px;
+    }
+  }
+}
+
+.purpose .content .logo, .purpose .content .header__inner h2, .header__inner .purpose .content h2, .purpose .content .banner .title span, .banner .title .purpose .content span {
+  font-size: 60px;
+}
+
+.features .content .feature i {
+  font-size: 100px;
+}
+.sns .content .slide-img img {
+  max-block-size: 350px;
+}
+
+.fp-slides {
+  max-width: 1050px;
+}

@@ -3,10 +3,23 @@
 Stylesheet: 1024px以上のモニタで適用
 
 ******************************************************************/
+h2,
+.heading {
+  font-size: 60px;
+}
+h3 {
+  font-size: 48px;
+}
+span.number {
+  font-size: 60px;
+}
+
+.section .content p {
+  font-size: 32px;
+}
 
 .banner {
   .concept {
-
     span {
       font-size: 60px;
 
@@ -21,4 +34,19 @@ Stylesheet: 1024px以上のモニタで適用
       font-size: 130px;
     }
   }
+}
+
+.purpose .content .logo, .purpose .content .header__inner h2, .header__inner .purpose .content h2, .purpose .content .banner .title span, .banner .title .purpose .content span {
+  font-size: 55px;
+}
+
+.features .content .feature i {
+  font-size: 90px;
+}
+.sns .content .slide-img img {
+  max-block-size: 280px;
+}
+
+.fp-slides {
+  max-width: 900px;
 }

@@ -1,6 +1,6 @@
 $fsH2: 40px;
 $fsH3: 35px;
-$fsP: 28px;
+$fsP: 24px;
 $arrowSize: 50px;
 
 $headerHeight: 60px;
@@ -20,6 +20,8 @@ $black: #151515;
 
 .section-before {
   content: "";
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 100;

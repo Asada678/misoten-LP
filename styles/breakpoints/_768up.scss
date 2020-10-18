@@ -3,11 +3,16 @@
 Stylesheet: 767px以上のタブレットやモニタで適用
 
 ******************************************************************/
+
+
+.section .content p {
+  font-size: 28px;
+}
+
 .banner {
   .concept {
     span {
       font-size: 55px;
-
     }
     small {
       font-size: 30px;
@@ -18,4 +23,16 @@ Stylesheet: 767px以上のタブレットやモニタで適用
       font-size: 110px;
     }
   }
+}
+.purpose .content .logo,
+.purpose .content .header__inner h2,
+.header__inner .purpose .content h2,
+.purpose .content .banner .title span,
+.banner .title .purpose .content span {
+  font-size: 45px;
+}
+
+.fp-slides {
+  max-width: 750px;
+  margin: auto;
 }

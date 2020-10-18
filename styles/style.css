@@ -8,6 +8,8 @@
 
 .section-before, .banner::before, .purpose::before, .coach::before, .sns::before {
   content: "";
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 100;
@@ -244,6 +246,13 @@ h2,
   position: relative;
   font-size: 40px;
   font-weight: 900;
+  font-style: italic;
+  color: #fff8fd;
+}
+
+h2 {
+  -webkit-filter: drop-shadow(-3px -3px 2px rgba(27, 38, 44, 0.4)) drop-shadow(5px 5px 5px rgba(27, 38, 44, 0.4));
+          filter: drop-shadow(-3px -3px 2px rgba(27, 38, 44, 0.4)) drop-shadow(5px 5px 5px rgba(27, 38, 44, 0.4));
 }
 
 h3 {
@@ -252,7 +261,7 @@ h3 {
 }
 
 p {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 span.break {
@@ -260,7 +269,7 @@ span.break {
 }
 
 span.number {
-  font-size: 45px;
+  font-size: 42px;
 }
 
 .section {
@@ -292,12 +301,14 @@ span.number {
   width: 100vw;
   height: 1px;
   display: block;
-  background-color: #cfd8dc;
-  opacity: 0.6;
+  background-color: #fff8fd;
+  opacity: 0.9;
   -webkit-transition: -webkit-transform 1.5s ease 0.2s;
   transition: -webkit-transform 1.5s ease 0.2s;
   transition: transform 1.5s ease 0.2s;
   transition: transform 1.5s ease 0.2s, -webkit-transform 1.5s ease 0.2s;
+  -webkit-filter: drop-shadow(-3px -3px 2px rgba(255, 248, 253, 0.8)) drop-shadow(5px 5px 5px rgba(255, 248, 253, 0.8));
+          filter: drop-shadow(-3px -3px 2px rgba(255, 248, 253, 0.8)) drop-shadow(5px 5px 5px rgba(255, 248, 253, 0.8));
 }
 
 .section__heading h2::before {
@@ -336,7 +347,7 @@ span.number {
 
 .section .content p {
   margin: 10px 0;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -358,6 +369,8 @@ span.number {
 
 .header__inner h2 {
   letter-spacing: 1px;
+  font-size: 40px;
+  color: #151515;
 }
 
 .banner {
@@ -365,7 +378,7 @@ span.number {
 }
 
 .banner::before {
-  background: url(../../images/banner.jpg) no-repeat center;
+  background-image: url(../../images/banner.jpg);
 }
 
 .banner .concept {
@@ -404,7 +417,7 @@ span.number {
 }
 
 .purpose::before {
-  background: url(../../images/purpose.jpg) no-repeat center;
+  background-image: url(../../images/purpose.jpg);
   opacity: 0.7;
 }
 
@@ -413,7 +426,7 @@ span.number {
 }
 
 .purpose .content .text {
-  padding: 10px 0;
+  padding: 5px 0;
   background-color: rgba(21, 21, 21, 0.4);
   border-radius: 20px;
 }
@@ -479,7 +492,6 @@ span.number {
 }
 
 .features .content .feature i {
-  font-size: 40px;
   font-size: 60px;
 }
 
@@ -488,7 +500,7 @@ span.number {
 }
 
 .coach::before {
-  background: url(../../images/coach-2.jpg) no-repeat center;
+  background-image: url(../../images/coach-2.jpg);
 }
 
 .coach .content {
@@ -505,7 +517,7 @@ span.number {
 }
 
 .sns::before {
-  background: url(../../images/sns.jpg) no-repeat center;
+  background-image: url(../../images/sns.jpg);
 }
 
 .sns .content {
@@ -550,7 +562,7 @@ span.number {
      object-fit: contain;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 667px) {
   /******************************************************************
 
 Stylesheet: 480px以上(スマホの横向き)のモニタで適用
@@ -584,19 +596,20 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
   .sns .content .text {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    min-width: calc(375px + 5%);
+    min-width: 375px;
   }
   .sns .content .slide-img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
     height: 100%;
   }
 }
@@ -607,6 +620,9 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 Stylesheet: 767px以上のタブレットやモニタで適用
 
 ******************************************************************/
+  .section .content p {
+    font-size: 28px;
+  }
   .banner .concept span {
     font-size: 55px;
   }
@@ -616,6 +632,17 @@ Stylesheet: 767px以上のタブレットやモニタで適用
   .banner .title span {
     font-size: 110px;
   }
+  .purpose .content .logo, .purpose .content .header__inner h2, .header__inner .purpose .content h2, .purpose .content .banner .title span, .banner .title .purpose .content span,
+  .purpose .content .header__inner h2,
+  .header__inner .purpose .content h2,
+  .purpose .content .banner .title span,
+  .banner .title .purpose .content span {
+    font-size: 45px;
+  }
+  .fp-slides {
+    max-width: 750px;
+    margin: auto;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -624,6 +651,19 @@ Stylesheet: 767px以上のタブレットやモニタで適用
 Stylesheet: 1024px以上のモニタで適用
 
 ******************************************************************/
+  h2,
+  .heading {
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 48px;
+  }
+  span.number {
+    font-size: 60px;
+  }
+  .section .content p {
+    font-size: 32px;
+  }
   .banner .concept span {
     font-size: 60px;
   }
@@ -634,6 +674,22 @@ Stylesheet: 1024px以上のモニタで適用
     padding-right: 20px;
     font-size: 130px;
   }
+  .purpose .content .logo, .purpose .content .header__inner h2, .header__inner .purpose .content h2, .purpose .content .banner .title span, .banner .title .purpose .content span,
+  .purpose .content .header__inner h2,
+  .header__inner .purpose .content h2,
+  .purpose .content .banner .title span,
+  .banner .title .purpose .content span {
+    font-size: 55px;
+  }
+  .features .content .feature i {
+    font-size: 90px;
+  }
+  .sns .content .slide-img img {
+    max-block-size: 280px;
+  }
+  .fp-slides {
+    max-width: 900px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -642,6 +698,44 @@ Stylesheet: 1024px以上のモニタで適用
 Stylesheet: 1280px以上のモニタで適用
 
 ******************************************************************/
+  h2,
+  .heading {
+    font-size: 65px;
+  }
+  h3 {
+    font-size: 54px;
+  }
+  span.number {
+    font-size: 70px;
+  }
+  .section .content p {
+    font-size: 36px;
+  }
+  .banner .concept span {
+    font-size: 70px;
+  }
+  .banner .concept small {
+    font-size: 35px;
+  }
+  .banner .title span {
+    font-size: 140px;
+  }
+  .purpose .content .logo, .purpose .content .header__inner h2, .header__inner .purpose .content h2, .purpose .content .banner .title span, .banner .title .purpose .content span,
+  .purpose .content .header__inner h2,
+  .header__inner .purpose .content h2,
+  .purpose .content .banner .title span,
+  .banner .title .purpose .content span {
+    font-size: 60px;
+  }
+  .features .content .feature i {
+    font-size: 100px;
+  }
+  .sns .content .slide-img img {
+    max-block-size: 350px;
+  }
+  .fp-slides {
+    max-width: 1050px;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {

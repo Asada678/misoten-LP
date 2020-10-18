@@ -18,6 +18,12 @@ h2,
   position: relative;
   font-size: $fsH2;
   font-weight: 900;
+  font-style: italic;
+  color: $white;
+}
+h2 {
+  filter: drop-shadow(-3px -3px 2px rgba(27, 38, 44, 0.4))
+    drop-shadow(5px 5px 5px rgba(27, 38, 44, 0.4));
 }
 h3 {
   font-size: $fsH3;
@@ -31,7 +37,7 @@ span {
     display: block;
   }
   &.number {
-    font-size: 45px;
+    font-size: 42px;
   }
 }
 
@@ -58,9 +64,11 @@ span {
         width: 100vw;
         height: 1px;
         display: block;
-        background-color: #cfd8dc;
-        opacity: 0.6;
+        background-color: $white;
+        opacity: 0.9;
         transition: transform 1.5s ease 0.2s;
+        filter: drop-shadow(-3px -3px 2px rgba($white, 0.8))
+          drop-shadow(5px 5px 5px rgba($white, 0.8));
       }
 
       &::before {
@@ -112,6 +120,8 @@ span {
 
     h2 {
       letter-spacing: 1px;
+      font-size: $fsH2;
+      color: $black;
       @extend .logo;
     }
   }
@@ -126,7 +136,7 @@ span {
   );
 
   &::before {
-    background: url(../../images/banner.jpg) no-repeat center;
+    background-image: url(../../images/banner.jpg);
     @extend .section-before;
   }
 
@@ -165,7 +175,7 @@ span {
   background-color: rgba(#202020, 0.6);
   color: $white;
   &::before {
-    background: url(../../images/purpose.jpg) no-repeat center;
+    background-image: url(../../images/purpose.jpg);
     @extend .section-before;
     opacity: 0.7;
   }
@@ -174,7 +184,7 @@ span {
     padding: 0 5px;
 
     .text {
-      padding: 10px 0;
+      padding: 5px 0;
       background-color: rgba($black, 0.4);
       border-radius: 20px;
     }
@@ -188,11 +198,6 @@ span {
 }
 
 .features {
-  // &::before {
-  //   background: url(../../images/features.jpg) no-repeat center;
-  //   @extend .section-before;
-  //   opacity: 0.7;
-  // }
   .content {
     height: 100%;
 
@@ -235,7 +240,6 @@ span {
       }
 
       i {
-        font-size: $fsH2;
         font-size: 60px;
       }
     }
@@ -250,7 +254,7 @@ span {
     rgba(255, 65, 77, 0.95) 90%
   );
   &::before {
-    background: url(../../images/coach-2.jpg) no-repeat center;
+    background-image: url(../../images/coach-2.jpg);
     @extend .section-before;
   }
   .content {
@@ -270,7 +274,7 @@ span {
     rgba(26, 129, 223, 0.95) 90%
   );
   &::before {
-    background: url(../../images/sns.jpg) no-repeat center;
+    background-image: url(../../images/sns.jpg);
     @extend .section-before;
   }
 
