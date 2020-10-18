@@ -308,6 +308,8 @@ span.number {
   background-color: #fff8fd;
   -webkit-transition: all 1.5s ease 0.2s;
   transition: all 1.5s ease 0.2s;
+  -webkit-filter: none;
+          filter: none;
 }
 
 .section__heading h2::before {
