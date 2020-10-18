@@ -134,9 +134,8 @@ span {
     .buttons {
       position: relative;
       display: flex;
-      // justify-content: space-between;
       align-items: center;
-      width: 100px;
+
       a {
         width: $instagramIconSize;
         height: $instagramIconSize;
@@ -437,6 +436,68 @@ span {
           0px 5px 10px -5px rgba($black, 0.6);
         object-fit: contain;
       }
+    }
+  }
+}
+
+.team {
+  .content {
+    -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
+  }
+  .member {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: #333;
+    padding: 20px 40px;
+    overflow: hidden;
+
+    &:hover {
+      .layer {
+        top: 0;
+      }
+    }
+
+    .layer {
+      position: absolute;
+      z-index: 100;
+      top: calc(100% - 2px);
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255,150,66,0.9) 40%, rgba(21,21,21,0.9) 83%);
+      transition: .5s;
+    }
+
+    .text {
+      position: relative;
+      z-index: 200;
+
+      p {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        color: $white;
+      }
+    }
+
+    .img-box {
+      width: 100%;
+      height: 100px;
+      margin: 0 auto;
+      overflow: hidden;
+      
+      img {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        border: 4px solid $white;
+      }
+    }
+
+    .details {
+      font-size: 18px;
+      color: $white;
     }
   }
 }
