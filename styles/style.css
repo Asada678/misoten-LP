@@ -371,6 +371,7 @@ span.number {
 }
 
 .header__inner h2 {
+  padding-right: 15px;
   letter-spacing: 1px;
   font-size: 40px;
   color: #151515;
