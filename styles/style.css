@@ -306,13 +306,10 @@ span.number {
   height: 1px;
   display: block;
   background-color: #fff8fd;
-  opacity: 0.9;
   -webkit-transition: -webkit-transform 1.5s ease 0.2s;
   transition: -webkit-transform 1.5s ease 0.2s;
   transition: transform 1.5s ease 0.2s;
   transition: transform 1.5s ease 0.2s, -webkit-transform 1.5s ease 0.2s;
-  -webkit-filter: drop-shadow(-3px -3px 2px rgba(255, 248, 253, 0.8)) drop-shadow(5px 5px 5px rgba(255, 248, 253, 0.8));
-          filter: drop-shadow(-3px -3px 2px rgba(255, 248, 253, 0.8)) drop-shadow(5px 5px 5px rgba(255, 248, 253, 0.8));
 }
 
 .section__heading h2::before {
