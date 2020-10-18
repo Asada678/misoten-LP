@@ -389,12 +389,11 @@ span.number {
 }
 
 .header__inner .buttons a {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: inline-block;
   border-radius: 24px;
   overflow: hidden;
-  font-size: 28px;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
   position: relative;
@@ -418,7 +417,7 @@ span.number {
   background-position: 100% 100%;
   top: 0;
   left: 0;
-  line-height: 40px;
+  line-height: 30px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition: background 0.5s;
@@ -426,7 +425,7 @@ span.number {
 }
 
 .header__inner .buttons i {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .header__inner .buttons .selected-language {
@@ -436,8 +435,8 @@ span.number {
 
 .header__inner .buttons .selected-language img {
   display: block;
-  width: 48px;
-  height: 32px;
+  width: 42px;
+  height: 28px;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;

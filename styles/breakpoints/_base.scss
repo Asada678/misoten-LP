@@ -138,12 +138,11 @@ span {
       align-items: center;
       width: 100px;
       a {
-        width: 40px;
-        height: 40px;
+        width: $instagramIconSize;
+        height: $instagramIconSize;
         display: inline-block;
         border-radius: 24px;
         overflow: hidden;
-        font-size: 28px;
         transition: 0.3s linear;
         position: relative;
 
@@ -170,14 +169,14 @@ span {
           background-position: 100% 100%;
           top: 0;
           left: 0;
-          line-height: 40px;
+          line-height: $instagramIconSize;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           transition: background 0.5s;
         }
       }
       i {
-        font-size: 40px;
+        font-size: $instagramIconSize;
       }
 
       .selected-language {
@@ -186,8 +185,8 @@ span {
 
         img {
           display: block;
-          width: 48px;
-          height: 32px;
+          width: 42px;
+          height: 28px;
           cursor: pointer;
           transition: 0.5s;
 
