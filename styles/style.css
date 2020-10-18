@@ -294,6 +294,10 @@ span.number {
   width: 100%;
 }
 
+.section__heading h2 {
+  padding: 0 10px;
+}
+
 .section__heading h2::before, .section__heading h2::after {
   content: "";
   position: absolute;
