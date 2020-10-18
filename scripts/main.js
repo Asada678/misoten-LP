@@ -1,10 +1,21 @@
 'use strict';
 
-// const fullpage = require("./vendors/fullpage");
-
 document.addEventListener('DOMContentLoaded', function () {
   const main = new Main();
   // console.log('main:', main);
+  const languages = document.querySelector('.languages');
+  const lis = languages.querySelectorAll('li');
+  lis.forEach(li => {
+    li.addEventListener('click', (event) => {
+      event.preventDefault();
+      console.log('event.target:', event.target);
+    })
+  });
+  const selectedLanguage = document.querySelector('.selected-language');
+  selectedLanguage.addEventListener('click', () => {
+    const languages = document.querySelector('.languages');
+    languages.classList.toggle('open');
+  })
 });
 
 class Main {
@@ -101,7 +112,7 @@ class Main {
     // this.observers = new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false});
     this.observers = new ScrollObserver('.appear', this._inviewAnimation);
     this.observers = new ScrollObserver('.section__heading h2', this._inviewAnimation);
-    this.observers = new ScrollObserver('.arrow-container', this._inviewAnimation, { once: false});
+    this.observers = new ScrollObserver('.arrow-container', this._inviewAnimation, { once: false });
     // this.observers = new ScrollObserver('#main-content', this._sideAnimation.bind(this), {once: false, rootMargin: "-300px 0px"});
     // console.log('this.observers:', this.observers);
   }
