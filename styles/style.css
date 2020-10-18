@@ -306,10 +306,8 @@ span.number {
   height: 1px;
   display: block;
   background-color: #fff8fd;
-  -webkit-transition: -webkit-transform 1.5s ease 0.2s;
-  transition: -webkit-transform 1.5s ease 0.2s;
-  transition: transform 1.5s ease 0.2s;
-  transition: transform 1.5s ease 0.2s, -webkit-transform 1.5s ease 0.2s;
+  -webkit-transition: all 1.5s ease 0.2s;
+  transition: all 1.5s ease 0.2s;
 }
 
 .section__heading h2::before {
