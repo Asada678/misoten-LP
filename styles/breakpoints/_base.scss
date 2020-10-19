@@ -442,12 +442,20 @@ span {
 
 .team {
   .content {
-    // -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
+    -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
     max-width: 100%;
+    height: 100%;
+    max-height: 180px;
+    // max-height: 50%;
+    // padding: 15% 0 10% 0;
   }
   .member {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     width: 100%;
+    height: 100%;
     margin: 0 auto;
     background: rgba($black, 0.9);
     padding: 10px 20px;
@@ -474,6 +482,12 @@ span {
         rgba(255, 150, 66, 0.9) 40%,
         rgba(21, 21, 21, 0.9) 83%
       );
+      background: linear-gradient(
+        135deg,
+        rgba(255, 248, 253, 0.1) 18%,
+        rgba(255, 150, 66, 0.6) 88%
+      );
+      opacity: 0.6;
       transition: 0.5s;
     }
 
@@ -496,16 +510,30 @@ span {
       overflow: hidden;
 
       img {
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
+        border-radius: 10px;
+        width: 75px;
+        height: 100px;
         border: 4px solid $white;
       }
     }
 
-    .details {
-      font-size: 18px;
-      color: $white;
+    .name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+
+      img {
+        width: 24px;
+        height: 16px;
+        margin-right: 5px;
+      }
+
+      span {
+        font-size: 18px;
+        font-weight: 700;
+        color: $white;
+      }
     }
   }
 }

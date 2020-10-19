@@ -229,8 +229,7 @@
 
 .swiper-container {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  height: 100%;
   overflow: visible;
 }
 
@@ -759,12 +758,26 @@ span.number {
 }
 
 .team .content {
+  -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
   max-width: 100%;
+  height: 100%;
+  max-height: 180px;
 }
 
 .team .member {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   background: rgba(21, 21, 21, 0.9);
   padding: 10px 20px;
@@ -785,6 +798,8 @@ span.number {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, rgba(255, 150, 66, 0.9) 40%, rgba(21, 21, 21, 0.9) 83%);
+  background: linear-gradient(135deg, rgba(255, 248, 253, 0.1) 18%, rgba(255, 150, 66, 0.6) 88%);
+  opacity: 0.6;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -808,14 +823,34 @@ span.number {
 }
 
 .team .member .img-box img {
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  border-radius: 10px;
+  width: 75px;
+  height: 100px;
   border: 4px solid #fff8fd;
 }
 
-.team .member .details {
+.team .member .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+.team .member .name img {
+  width: 24px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.team .member .name span {
   font-size: 18px;
+  font-weight: 700;
   color: #fff8fd;
 }
 
