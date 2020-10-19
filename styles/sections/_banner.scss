@@ -6,6 +6,10 @@
     rgba($orange, 1) 90%
   );
 
+  .content {
+    opacity: 0;
+  }
+
   &::before {
     background-image: url(../../images/banner.jpg);
     @extend .section-before;

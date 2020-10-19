@@ -259,6 +259,10 @@
   background: linear-gradient(315deg, #ff9642 10%, rgba(217, 238, 36, 0.5) 48%, #ff9642 90%);
 }
 
+.banner .content {
+  opacity: 0;
+}
+
 .banner::before {
   background-image: url(../../images/banner.jpg);
 }
@@ -746,10 +750,10 @@ span.number {
 .section__heading h2 {
   padding: 0 15px;
   opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
 .section__heading h2.inview {
@@ -802,6 +806,13 @@ span.number {
   width: 100%;
   max-width: 1050px;
   margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.section .content.active {
+  opacity: 1;
 }
 
 .section .content p {
@@ -851,10 +862,10 @@ span.number {
           align-items: center;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
 .header__inner .buttons a {
@@ -1027,8 +1038,8 @@ span.number {
   font-weight: 900;
   -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.4);
-  -webkit-transition: color .2s, background-color .4s;
-  transition: color .2s, background-color .4s;
+  -webkit-transition: color 0.2s, background-color 0.4s;
+  transition: color 0.2s, background-color 0.4s;
 }
 
 .link .content a span {

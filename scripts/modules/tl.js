@@ -1,13 +1,18 @@
 'use strict';
 
 const defaultOption = {
-  // markers: true,
-  start: 'top 70%',
-  end: 'bottom top',
-  toggleActions: 'play pause resume pause'
+  markers: true,
+  // start: 'top top',
+  // start: 'bottom bottom',
+  start: 'center 50%',
+  end: 'center 25%',
+  // end: '110% 110%',
+  // toggleActions: 'play pause resume pause'
 }
 class Tl extends gsap.timeline {
   constructor(val) {
-    super({ scrollTrigger: Object.assign(defaultOption, val) });
+    const option = Object.assign(defaultOption, val);
+    console.log('option:', option);
+    super({ scrollTrigger: option });
   }
 }

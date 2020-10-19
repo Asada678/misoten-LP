@@ -26,6 +26,7 @@
         height: 60%;
         padding-top: 15%;
         background-color: #ff414d;
+        // transform: translateX(-400px);
         &:before {
           bottom: 0;
           clip-path: polygon(100% 0, 50% 100%, 100% 100%);
@@ -39,6 +40,7 @@
       &.blue {
         height: 40%;
         background-color: #1a81b7;
+        // transform: translateX(400px);
         &:before {
           top: 0;
           clip-path: polygon(50% 0, 0% 0, 0 100%);

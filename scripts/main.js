@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 class Main {
   constructor() {
+    this.tl = gsap.timeline();
     this.header = document.querySelector('.header');
     this.languages = document.querySelector('.languages');
     this.selectedLanguage = document.querySelector('.selected-language');
@@ -28,8 +29,7 @@ class Main {
   _init() {
     // new MobileMenu();
     // this.hero = new HeroSlider('.swiper-container');
-    this._initSwiper();
-    this._addEvents();
+    
     new fullpage('#container', {
       autoScrolling: true,
       navigation: true,
@@ -37,28 +37,39 @@ class Main {
       // navigationTooltips: ['Home', 'Purpose', 'Features', 'Coach', 'SNS', 'Team', 'Technologies', 'Footer'],
       showActiveTooltip: true,
       controlArrows: false,
-      slidesNavigation: true
+      slidesNavigation: true,
+      afterLoad: function (origin, destination, direction) {
+        console.log('origin, destination, direction:', origin, destination, direction);
+        const destinationSectionContent = document.querySelector(`.section[data-anchor=${destination.anchor}] .content`);
+        destinationSectionContent.classList.add('active')
+        switch(destination.anchor) {
+          case 'section3':
+            tlSection3();
+          break;
+          default:
+            break;
+        }
+      },
+      onLeave: function (origin, destination, direction) {
+        const originSectionContent = document.querySelector(`.section[data-anchor=${origin.anchor}] .content`);
+        originSectionContent.classList.remove('active');
+        switch(origin.anchor) {
+          case 'section3':
+            removeSection3();
+          break;
+          default:
+            break;
+        }
+
+      }
     });
     Pace.on('done', this._paceDone.bind(this));
   }
 
   _paceDone() {
     this._scrollInit();
-    
-    const tl = new Tl();
-    // console.log('tl:', tl);
-    tl
-    .from('.concept', { x: '-100px', opacity: 0, duration: 0.5 })
-    .from('.title', { y: '50px', opacity: 0, duration: 1 })
-    tl
-    .from('.feature.red', { x: '-400px', opacity: 0, duration: 0.5 })
-    .from('.feature.blue', { x: '400px', opacity: 0, duration: 0.5 })
-    .call(() => {
-      const features = document.querySelectorAll('.feature');
-      features.forEach(feature => {
-        feature.classList.add('tl-done')
-      })
-    })
+    this._initSwiper();
+    this._addEvents();
   }
 
   _initSwiper() {
@@ -77,6 +88,8 @@ class Main {
       loop: true
     });
   }
+
+  
 
   _navAnimation(el, inview) {
     if (inview) {
@@ -148,4 +161,23 @@ class Main {
     });
 
   }
+}
+
+function tlSection3() {
+  const tl = gsap.timeline();
+  tl
+  .from('.feature.red', { x: '-400px', opacity: 0, duration: 0.5 }, '+=0')
+  .from('.feature.blue', { x: '400px', opacity: 0, duration: 0.5 })
+  .call(() => {
+    const features = document.querySelectorAll('.feature');
+    features.forEach(feature => {
+      feature.classList.add('tl-done')
+    })
+  })
+}
+function removeSection3() {
+  const features = document.querySelectorAll('.feature');
+    features.forEach(feature => {
+      feature.classList.remove('tl-done')
+    })
 }
