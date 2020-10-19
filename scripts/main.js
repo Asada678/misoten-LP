@@ -29,7 +29,35 @@ class Main {
   _init() {
     // new MobileMenu();
     // this.hero = new HeroSlider('.swiper-container');
+    Pace.on('done', this._paceDone.bind(this));
+  }
 
+  _paceDone() {
+    this._initFullpage();
+    this._scrollInit();
+    this._initSwiper();
+    this._addEvents();
+    // tlSection1();
+  }
+
+  _initSwiper() {
+    const swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 0,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true
+    });
+  }
+
+  _initFullpage() {
     new fullpage('#container', {
       autoScrolling: true,
       navigation: true,
@@ -70,34 +98,7 @@ class Main {
 
       }
     });
-    Pace.on('done', this._paceDone.bind(this));
   }
-
-  _paceDone() {
-    this._scrollInit();
-    this._initSwiper();
-    this._addEvents();
-    tlSection1();
-  }
-
-  _initSwiper() {
-    const swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 0,
-        modifier: 1,
-        slideShadows: true,
-      },
-      loop: true
-    });
-  }
-
-
 
   _navAnimation(el, inview) {
     if (inview) {
@@ -174,8 +175,8 @@ class Main {
 function tlSection1() {
   const tl = gsap.timeline();
   tl
-    .from('.concept .item', { x: '-70px', opacity: 0, duration: 1, stagger: 0.3 }, '+=0.3')
-    .from('.title', { y: '70px', opacity: 0, duration: 0.5})
+    .from('.concept .item', { x: '-70px', opacity: 0, duration: .5, stagger: 0.3 }, '+=0.3')
+    .from('.title', {opacity: 0, duration: 2})
 }
 function tlSection3() {
   const tl = gsap.timeline();
