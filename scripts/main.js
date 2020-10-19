@@ -29,7 +29,7 @@ class Main {
   _init() {
     // new MobileMenu();
     // this.hero = new HeroSlider('.swiper-container');
-    
+
     new fullpage('#container', {
       autoScrolling: true,
       navigation: true,
@@ -44,10 +44,13 @@ class Main {
         destinationSectionContents.forEach(el => {
           el.classList.add('active');
         })
-        switch(destination.anchor) {
+        switch (destination.anchor) {
+          case 'section1':
+            tlSection1();
+            break;
           case 'section3':
             tlSection3();
-          break;
+            break;
           default:
             break;
         }
@@ -57,10 +60,10 @@ class Main {
         originSectionContents.forEach(el => {
           el.classList.remove('active');
         })
-        switch(origin.anchor) {
+        switch (origin.anchor) {
           case 'section3':
             removeSection3();
-          break;
+            break;
           default:
             break;
         }
@@ -74,6 +77,7 @@ class Main {
     this._scrollInit();
     this._initSwiper();
     this._addEvents();
+    tlSection1();
   }
 
   _initSwiper() {
@@ -93,7 +97,7 @@ class Main {
     });
   }
 
-  
+
 
   _navAnimation(el, inview) {
     if (inview) {
@@ -167,21 +171,27 @@ class Main {
   }
 }
 
+function tlSection1() {
+  const tl = gsap.timeline();
+  tl
+    .from('.concept .item', { x: '-70px', opacity: 0, duration: 1, stagger: 0.3 }, '+=0.3')
+    .from('.title', { y: '70px', opacity: 0, duration: 0.5})
+}
 function tlSection3() {
   const tl = gsap.timeline();
   tl
-  .from('.feature.red', { x: '-700px', opacity: 0, duration: 0.5 }, '+=0')
-  .from('.feature.blue', { x: '700px', opacity: 0, duration: 0.5 })
-  .call(() => {
-    const features = document.querySelectorAll('.feature');
-    features.forEach(feature => {
-      feature.classList.add('tl-done')
+    .from('.feature.red', { x: '-700px', opacity: 0, duration: 0.5 }, '+=0')
+    .from('.feature.blue', { x: '700px', opacity: 0, duration: 0.5 })
+    .call(() => {
+      const features = document.querySelectorAll('.feature');
+      features.forEach(feature => {
+        feature.classList.add('tl-done')
+      })
     })
-  })
 }
 function removeSection3() {
   const features = document.querySelectorAll('.feature');
-    features.forEach(feature => {
-      feature.classList.remove('tl-done')
-    })
+  features.forEach(feature => {
+    feature.classList.remove('tl-done')
+  })
 }
