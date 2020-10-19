@@ -54,7 +54,6 @@ class Main {
         slideShadows: true,
       },
       loop: true,
-      moveStartThreshold: 200
     });
   }
 
@@ -67,6 +66,7 @@ class Main {
       showActiveTooltip: true,
       controlArrows: false,
       slidesNavigation: true,
+      touchSensitivity: 1,
       afterLoad: function (origin, destination, direction) {
         console.log('origin, destination, direction:', origin, destination, direction);
         const destinationSectionContents = document.querySelectorAll(`.section[data-anchor=${destination.anchor}] .content`);
