@@ -32,9 +32,9 @@
     z-index: 100;
     color: $black;
     width: 100%;
-    transform: none !important;
-    transition-delay: 2s !important;
-    transition: 3s !important;
+    // transform: none !important;
+    // transition-delay: 2s !important;
+    // transition: 3s !important;
 
     h1 {
     }
@@ -46,4 +46,5 @@
       @extend .logo;
     }
   }
+
 }

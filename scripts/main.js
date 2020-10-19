@@ -30,11 +30,6 @@ class Main {
     // this.hero = new HeroSlider('.swiper-container');
     this._initSwiper();
     this._addEvents();
-    Pace.on('done', this._paceDone.bind(this));
-  }
-
-  _paceDone() {
-    this._scrollInit();
     new fullpage('#container', {
       autoScrolling: true,
       navigation: true,
@@ -43,7 +38,18 @@ class Main {
       showActiveTooltip: true,
       controlArrows: false,
       slidesNavigation: true
-    })
+    });
+    Pace.on('done', this._paceDone.bind(this));
+  }
+
+  _paceDone() {
+    this._scrollInit();
+    
+    const tl = new Tl();
+    // console.log('tl:', tl);
+    tl
+    .from('.concept', { x: '-100px', opacity: 0, duration: 0.5 })
+    .from('.title', { y: '100px', opacity: 0, duration: 1 })
   }
 
   _initSwiper() {
@@ -113,23 +119,14 @@ class Main {
   }
 
   _scrollInit() {
-    // this.observers = new ScrollObserver('.header', this._inviewAnimation, { once: false});
     this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false });
-    console.log('this:', this);
-    // console.log('this._observers:', this._observers);
-    // this.observers = new ScrollObserver('.cover-slide', this._inviewAnimation);
-    // this.observers = new ScrollObserver('.tween-animate-title', this._textAnimation);
-    // this.observers = new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false});
     this.observers = new ScrollObserver('.appear', this._inviewAnimation);
     this.observers = new ScrollObserver('.section__heading h2', this._inviewAnimation);
     this.observers = new ScrollObserver('.arrow-container', this._inviewAnimation, { once: false });
-    // this.observers = new ScrollObserver('#main-content', this._sideAnimation.bind(this), {once: false, rootMargin: "-300px 0px"});
-    // console.log('this.observers:', this.observers);
   }
 
   _addEvents() {
     this.selectedLanguage.addEventListener('click', () => {
-      console.log('this:', this);
       this.languages.classList.toggle('open');
     });
 
