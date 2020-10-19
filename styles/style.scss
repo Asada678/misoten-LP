@@ -1,7 +1,18 @@
+// modules
 @import 'modules/variables';
 @import 'modules/appear';
 @import 'modules/arrow';
 @import 'modules/swiper';
+
+// sections
+@import 'sections/banner';
+@import 'sections/purpose';
+@import 'sections/features';
+@import 'sections/_coach';
+@import 'sections/sns';
+@import 'sections/team';
+// @import 'sections/banner';
+@import 'sections/link';
 
 @import "breakpoints/base";
 
