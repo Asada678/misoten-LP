@@ -270,6 +270,10 @@ Stylesheet: ベーススタイル
   font-family: "M PLUS 1p", sans-serif;
 }
 
+body {
+  overflow: hidden;
+}
+
 h2,
 .heading {
   position: relative;
@@ -377,29 +381,24 @@ span.number {
 .header {
   position: fixed;
   z-index: 1000;
-  width: 100%;
+  width: 100vw;
   height: 60px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .header__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
   width: 100%;
+  height: 100%;
   max-width: 1050px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
 .header__inner h2 {
+  position: absolute;
+  left: 10px;
   padding-right: 15px;
   letter-spacing: 1px;
   font-size: 40px;
@@ -407,13 +406,23 @@ span.number {
 }
 
 .header__inner .buttons {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
 }
 
 .header__inner .buttons a {
@@ -870,8 +879,8 @@ span.number {
   letter-spacing: 2px;
   font-size: 30px;
   font-weight: 900;
-  -webkit-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.4);
   -webkit-transition: color .2s, background-color .4s;
   transition: color .2s, background-color .4s;
 }
@@ -881,10 +890,10 @@ span.number {
   z-index: 10;
   display: block;
   background-color: #ff9642;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .link .content a span:nth-child(1) {

@@ -3,38 +3,16 @@
 document.addEventListener('DOMContentLoaded', function () {
   const main = new Main();
   // console.log('main:', main);
-  const languages = document.querySelector('.languages');
-  const lis = languages.querySelectorAll('li');
-  lis.forEach(li => {
-    li.addEventListener('click', (event) => {
-      event.preventDefault();
-      console.log('event.target:', event.target);
-    })
-  });
-  const selectedLanguage = document.querySelector('.selected-language');
-  selectedLanguage.addEventListener('click', () => {
-    const languages = document.querySelector('.languages');
-    languages.classList.toggle('open');
-  });
-  const swiper = new Swiper('.swiper-container', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 0,
-      modifier: 1,
-      slideShadows: true,
-    },
-    loop: true
-  });
+
+
+
 });
 
 class Main {
   constructor() {
     this.header = document.querySelector('.header');
+    this.languages = document.querySelector('.languages');
+    this.selectedLanguage = document.querySelector('.selected-language');
     this._observers = [];
     this._init();
   }
@@ -48,6 +26,14 @@ class Main {
   }
 
   _init() {
+    // new MobileMenu();
+    // this.hero = new HeroSlider('.swiper-container');
+    this._initSwiper();
+    this._addEvents();
+    Pace.on('done', this._paceDone.bind(this));
+  }
+
+  _paceDone() {
     this._scrollInit();
     new fullpage('#container', {
       autoScrolling: true,
@@ -58,13 +44,23 @@ class Main {
       controlArrows: false,
       slidesNavigation: true
     })
-    // new MobileMenu();
-    // this.hero = new HeroSlider('.swiper-container');
-    // Pace.on('done', this._paceDone.bind(this));
   }
 
-  _paceDone() {
-    this._scrollInit();
+  _initSwiper() {
+    const swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 0,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true
+    });
   }
 
   _navAnimation(el, inview) {
@@ -129,5 +125,21 @@ class Main {
     this.observers = new ScrollObserver('.arrow-container', this._inviewAnimation, { once: false });
     // this.observers = new ScrollObserver('#main-content', this._sideAnimation.bind(this), {once: false, rootMargin: "-300px 0px"});
     // console.log('this.observers:', this.observers);
+  }
+
+  _addEvents() {
+    this.selectedLanguage.addEventListener('click', () => {
+      console.log('this:', this);
+      this.languages.classList.toggle('open');
+    });
+
+    const lis = this.languages.querySelectorAll('li');
+    lis.forEach(li => {
+      li.addEventListener('click', (event) => {
+        event.preventDefault();
+        console.log('event.target:', event.target);
+      })
+    });
+
   }
 }
