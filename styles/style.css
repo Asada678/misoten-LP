@@ -325,6 +325,8 @@
 
 .features .content {
   height: 100%;
+  -webkit-transform: none !important;
+          transform: none !important;
 }
 
 .features .content .feature {

@@ -170,8 +170,8 @@ class Main {
 function tlSection3() {
   const tl = gsap.timeline();
   tl
-  .from('.feature.red', { x: '-400px', opacity: 0, duration: 0.5 }, '+=0')
-  .from('.feature.blue', { x: '400px', opacity: 0, duration: 0.5 })
+  .from('.feature.red', { x: '-700px', opacity: 0, duration: 0.5 }, '+=0')
+  .from('.feature.blue', { x: '700px', opacity: 0, duration: 0.5 })
   .call(() => {
     const features = document.querySelectorAll('.feature');
     features.forEach(feature => {
