@@ -807,12 +807,18 @@ span.number {
   max-width: 1050px;
   margin: 0 auto;
   opacity: 0;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.5s;
+  transition: opacity 0.3s, -webkit-transform 0.5s;
+  transition: opacity 0.3s, transform 0.5s;
+  transition: opacity 0.3s, transform 0.5s, -webkit-transform 0.5s;
 }
 
 .section .content.active {
   opacity: 1;
+  -webkit-transform: none;
+          transform: none;
 }
 
 .section .content p {

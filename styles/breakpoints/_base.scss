@@ -109,10 +109,12 @@ span {
     max-width: 1050px;
     margin: 0 auto;
     opacity: 0;
-    transition: .3s;
+    transform: translateY(50px);
+    transition: opacity 0.3s, transform 0.5s;
 
     &.active {
       opacity: 1;
+      transform: none;
     }
 
     p {

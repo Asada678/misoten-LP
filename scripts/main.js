@@ -40,8 +40,10 @@ class Main {
       slidesNavigation: true,
       afterLoad: function (origin, destination, direction) {
         console.log('origin, destination, direction:', origin, destination, direction);
-        const destinationSectionContent = document.querySelector(`.section[data-anchor=${destination.anchor}] .content`);
-        destinationSectionContent.classList.add('active')
+        const destinationSectionContents = document.querySelectorAll(`.section[data-anchor=${destination.anchor}] .content`);
+        destinationSectionContents.forEach(el => {
+          el.classList.add('active');
+        })
         switch(destination.anchor) {
           case 'section3':
             tlSection3();
@@ -51,8 +53,10 @@ class Main {
         }
       },
       onLeave: function (origin, destination, direction) {
-        const originSectionContent = document.querySelector(`.section[data-anchor=${origin.anchor}] .content`);
-        originSectionContent.classList.remove('active');
+        const originSectionContents = document.querySelectorAll(`.section[data-anchor=${origin.anchor}] .content`);
+        originSectionContents.forEach(el => {
+          el.classList.remove('active');
+        })
         switch(origin.anchor) {
           case 'section3':
             removeSection3();
@@ -143,7 +147,7 @@ class Main {
   _scrollInit() {
     this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false });
     this.observers = new ScrollObserver('.appear', this._inviewAnimation);
-    this.observers = new ScrollObserver('.section__heading h2', this._inviewAnimation);
+    this.observers = new ScrollObserver('.section__heading h2', this._inviewAnimation, { once: false });
     this.observers = new ScrollObserver('.arrow-container', this._inviewAnimation, { once: false });
   }
 
