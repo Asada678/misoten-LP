@@ -49,7 +49,16 @@ class Main {
     // console.log('tl:', tl);
     tl
     .from('.concept', { x: '-100px', opacity: 0, duration: 0.5 })
-    .from('.title', { y: '100px', opacity: 0, duration: 1 })
+    .from('.title', { y: '50px', opacity: 0, duration: 1 })
+    tl
+    .from('.feature.red', { x: '-400px', opacity: 0, duration: 0.5 })
+    .from('.feature.blue', { x: '400px', opacity: 0, duration: 0.5 })
+    .call(() => {
+      const features = document.querySelectorAll('.feature');
+      features.forEach(feature => {
+        feature.classList.add('tl-done')
+      })
+    })
   }
 
   _initSwiper() {

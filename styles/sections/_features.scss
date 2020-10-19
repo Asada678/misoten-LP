@@ -17,9 +17,11 @@
         position: absolute;
         left: 0;
         width: 100%;
-        height: 40px;
+        height: 50px;
+        transform: scaleY(0);
+        transition: .3s;
       }
-
+      
       &.red {
         height: 60%;
         padding-top: 15%;
@@ -27,7 +29,11 @@
         &:before {
           bottom: 0;
           clip-path: polygon(100% 0, 50% 100%, 100% 100%);
+          transform-origin: bottom;
           background-color: #1a81b7;
+        }
+        &.tl-done:before {
+          transform: scaleY(1);
         }
       }
       &.blue {
@@ -36,7 +42,11 @@
         &:before {
           top: 0;
           clip-path: polygon(50% 0, 0% 0, 0 100%);
+          transform-origin: top;
           background-color: #ff414d;
+        }
+        &.tl-done:before {
+          transform: scaleY(1);
         }
       }
 
