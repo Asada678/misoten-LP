@@ -169,8 +169,8 @@
   max-width: 1050px;
   height: 50px;
   opacity: 0;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
 }
 
 .arrow-container.inview {

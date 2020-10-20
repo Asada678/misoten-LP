@@ -1,6 +1,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
+  new ViewportExtra(375)
   const main = new Main();
   // console.log('main:', main);
 
@@ -68,7 +69,7 @@ class Main {
       slidesNavigation: true,
       touchSensitivity: 12,
       afterLoad: function (origin, destination, direction) {
-        console.log('origin, destination, direction:', origin, destination, direction);
+        // console.log('origin, destination, direction:', origin, destination, direction);
         const destinationSectionContents = document.querySelectorAll(`.section[data-anchor=${destination.anchor}] .content`);
         destinationSectionContents.forEach(el => {
           el.classList.add('active');
@@ -151,7 +152,7 @@ class Main {
   }
 
   _scrollInit() {
-    this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false });
+    // this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false });
     this.observers = new ScrollObserver('.appear', this._inviewAnimation);
     this.observers = new ScrollObserver('.section__heading h2', this._inviewAnimation, { once: false });
     this.observers = new ScrollObserver('.arrow-container', this._inviewAnimation, { once: false });
@@ -173,7 +174,6 @@ class Main {
     const rightArrows = document.querySelectorAll('.arrow.right');
     rightArrows.forEach(rightArrow => {
       rightArrow.addEventListener('click', () => {
-        console.log('this:', this);
         this.fullpage.moveSlideRight();
       })
     })
