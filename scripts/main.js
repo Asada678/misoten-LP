@@ -58,7 +58,7 @@ class Main {
   }
 
   _initFullpage() {
-    new fullpage('#container', {
+    this.fullpage = new fullpage('#container', {
       autoScrolling: true,
       navigation: true,
       anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8',],
@@ -169,6 +169,20 @@ class Main {
         console.log('event.target:', event.target);
       })
     });
+
+    const rightArrows = document.querySelectorAll('.arrow.right');
+    rightArrows.forEach(rightArrow => {
+      rightArrow.addEventListener('click', () => {
+        console.log('this:', this);
+        this.fullpage.moveSlideRight();
+      })
+    })
+    const downArrows = document.querySelectorAll('.arrow.down');
+    downArrows.forEach(downArrow => {
+      downArrow.addEventListener('click', () => {
+        this.fullpage.moveSectionDown();
+      })
+    })
 
   }
 }
