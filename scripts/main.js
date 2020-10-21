@@ -1,7 +1,7 @@
 'use strict';
 
+new ViewportExtra(375)
 document.addEventListener('DOMContentLoaded', function () {
-  new ViewportExtra(375)
   const main = new Main();
   // console.log('main:', main);
 

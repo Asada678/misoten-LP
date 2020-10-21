@@ -169,6 +169,8 @@
   max-width: 1050px;
   height: 50px;
   opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
   -webkit-transition-delay: 2s;
           transition-delay: 2s;
 }
