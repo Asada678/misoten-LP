@@ -510,6 +510,13 @@
   top: 0;
 }
 
+.team .member .leader {
+  position: absolute;
+  -webkit-transform: skew(45deg, -45deg);
+          transform: skew(45deg, -45deg);
+  background-color: rgba(255, 150, 66, 0.8);
+}
+
 .team .member .layer {
   position: absolute;
   z-index: 100;
@@ -1053,7 +1060,7 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
   .banner .concept small {
     font-size: 28px;
   }
-  .banner .title span {
+  .banner .system-name span {
     font-size: 80px;
   }
   .slide .content {
@@ -1102,14 +1109,14 @@ Stylesheet: 767px以上のタブレットやモニタで適用
   .banner .concept small {
     font-size: 30px;
   }
-  .banner .title span {
+  .banner .system-name span {
     font-size: 110px;
   }
   .purpose .content .logo, .purpose .content .banner .system-name span, .banner .system-name .purpose .content span, .purpose .content .header__inner h2, .header__inner .purpose .content h2,
   .purpose .content .header__inner h2,
   .header__inner .purpose .content h2,
-  .purpose .content .banner .title span,
-  .banner .title .purpose .content span {
+  .purpose .content .banner .system-name span,
+  .banner .system-name .purpose .content span {
     font-size: 45px;
   }
   .fp-slides {
@@ -1143,15 +1150,15 @@ Stylesheet: 1024px以上のモニタで適用
   .banner .concept small {
     font-size: 30px;
   }
-  .banner .title span {
+  .banner .system-name span {
     padding-right: 20px;
     font-size: 130px;
   }
   .purpose .content .logo, .purpose .content .banner .system-name span, .banner .system-name .purpose .content span, .purpose .content .header__inner h2, .header__inner .purpose .content h2,
   .purpose .content .header__inner h2,
   .header__inner .purpose .content h2,
-  .purpose .content .banner .title span,
-  .banner .title .purpose .content span {
+  .purpose .content .banner .system-name span,
+  .banner .system-name .purpose .content span {
     font-size: 55px;
   }
   .features .content .feature i {
@@ -1190,14 +1197,14 @@ Stylesheet: 1280px以上のモニタで適用
   .banner .concept small {
     font-size: 35px;
   }
-  .banner .title span {
+  .banner .system-name span {
     font-size: 140px;
   }
   .purpose .content .logo, .purpose .content .banner .system-name span, .banner .system-name .purpose .content span, .purpose .content .header__inner h2, .header__inner .purpose .content h2,
   .purpose .content .header__inner h2,
   .header__inner .purpose .content h2,
-  .purpose .content .banner .title span,
-  .banner .title .purpose .content span {
+  .purpose .content .banner .system-name span,
+  .banner .system-name .purpose .content span {
     font-size: 60px;
   }
   .features .content .feature i {
