@@ -28,8 +28,14 @@
     }
     .leader {
       position: absolute;
-      transform: skew(45deg, -45deg);
+      top: 50%;
+      left: 5px;
+      padding: 10px;
+      border-radius: 50%;
+      transform: skew(10deg, -10deg);
       background-color: rgba($color: $orange, $alpha: 0.8);
+      color: $white;
+      font-weight: 900;
     }
     .layer {
       position: absolute;
