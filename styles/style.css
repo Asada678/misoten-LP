@@ -385,6 +385,25 @@
           transform: none !important;
 }
 
+.features .content .description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 30px 0;
+  background-color: #fff8fd;
+}
+
+.features .content .description h2 {
+  color: #151515;
+}
+
+.features .content .description p .number {
+  font-style: italic;
+}
+
 .features .content .feature {
   position: relative;
   z-index: auto;
@@ -410,8 +429,8 @@
   height: 50px;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .features .content .feature.red {

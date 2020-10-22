@@ -196,7 +196,10 @@ function tlSection1() {
 function tlSection3() {
   const tl = gsap.timeline();
   tl
-    .from('.feature.red', { x: '-700px', opacity: 0, duration: 0.5 }, '+=0')
+    .from('.description', { x: '-700px', opacity: 0, duration: 0.5 }, '+=0')
+    .from('.description .item', { y: '70px', opacity: 0, duration: 0.5, stagger: 0.5 }, '+=0')
+    // .to('.description', { x: '700px', opacity: 0, duration: 0.5 }, '+=0.5')
+    .from('.feature.red', { x: '-700px', opacity: 0, duration: 0.5 }, '+=0.5')
     .from('.feature.blue', { x: '700px', opacity: 0, duration: 0.5 })
     .call(() => {
       const features = document.querySelectorAll('.feature');
@@ -204,6 +207,7 @@ function tlSection3() {
         feature.classList.add('tl-done')
       })
     })
+    // .set('.description', { x: '-700px', opacity: 1, duration: 0.5 }, '+=0')
 }
 function removeSection3() {
   const features = document.querySelectorAll('.feature');
