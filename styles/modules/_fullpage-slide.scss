@@ -1,0 +1,30 @@
+.slide {
+  .content {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide-img {
+      padding: 10px;
+
+      img {
+        max-height: 180px;
+        // max-height: calc(100% - 300px);
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: rgba($white, 0.9);
+        box-shadow: 0px -2px 10px -5px rgba($black, 0.6),
+          0px 5px 10px -5px rgba($black, 0.6);
+        object-fit: contain;
+      }
+    }
+  }
+}

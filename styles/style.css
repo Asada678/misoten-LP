@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.logo, .banner .title span, .header__inner h2 {
+.logo, .banner .system-name span, .header__inner h2 {
   font-weight: 900;
   font-style: italic;
   -webkit-filter: drop-shadow(-3px -3px 2px rgba(255, 248, 253, 0.4)) drop-shadow(5px 5px 5px rgba(255, 248, 253, 0.4)) drop-shadow(0px 15px 15px rgba(255, 150, 66, 0.8));
@@ -239,6 +239,49 @@
   }
 }
 
+.slide .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff8fd;
+}
+
+.slide .content .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slide .content .slide-img {
+  padding: 10px;
+}
+
+.slide .content .slide-img img {
+  max-height: 180px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 248, 253, 0.9);
+  -webkit-box-shadow: 0px -2px 10px -5px rgba(21, 21, 21, 0.6), 0px 5px 10px -5px rgba(21, 21, 21, 0.6);
+          box-shadow: 0px -2px 10px -5px rgba(21, 21, 21, 0.6), 0px 5px 10px -5px rgba(21, 21, 21, 0.6);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -297,14 +340,14 @@
   font-size: 20px;
 }
 
-.banner .title {
+.banner .system-name {
   position: relative;
   z-index: 100;
   color: #151515;
   width: 100%;
 }
 
-.banner .title span {
+.banner .system-name span {
   font-family: "M PLUS 1p";
   padding-right: 5px;
   font-size: 58px;
@@ -330,7 +373,7 @@
   border-radius: 20px;
 }
 
-.purpose .content .logo, .purpose .content .banner .title span, .banner .title .purpose .content span, .purpose .content .header__inner h2, .header__inner .purpose .content h2 {
+.purpose .content .logo, .purpose .content .banner .system-name span, .banner .system-name .purpose .content span, .purpose .content .header__inner h2, .header__inner .purpose .content h2 {
   color: #151515;
   font-size: 40px;
   padding-right: 10px;
@@ -426,59 +469,12 @@
   color: #fff8fd;
 }
 
-.coach .content img {
-  width: 100%;
-  height: 100%;
-}
-
 .sns {
   background: linear-gradient(315deg, rgba(26, 129, 203, 0.8) 10%, rgba(102, 191, 191, 0.6) 48%, rgba(26, 129, 223, 0.95) 90%);
 }
 
 .sns::before {
   background-image: url(../../images/sns.jpg);
-}
-
-.sns .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: #fff8fd;
-}
-
-.sns .content .text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.sns .content .slide-img {
-  padding: 10px;
-}
-
-.sns .content .slide-img img {
-  max-height: 180px;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: rgba(255, 248, 253, 0.9);
-  -webkit-box-shadow: 0px -2px 10px -5px rgba(21, 21, 21, 0.6), 0px 5px 10px -5px rgba(21, 21, 21, 0.6);
-          box-shadow: 0px -2px 10px -5px rgba(21, 21, 21, 0.6), 0px 5px 10px -5px rgba(21, 21, 21, 0.6);
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .team .content {
@@ -1060,7 +1056,7 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
   .banner .title span {
     font-size: 80px;
   }
-  .sns .content {
+  .slide .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1070,12 +1066,12 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
             flex-direction: row;
     height: 100%;
   }
-  .sns .content .text {
+  .slide .content .text {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     min-width: 375px;
   }
-  .sns .content .slide-img {
+  .slide .content .slide-img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1109,7 +1105,7 @@ Stylesheet: 767px以上のタブレットやモニタで適用
   .banner .title span {
     font-size: 110px;
   }
-  .purpose .content .logo, .purpose .content .banner .title span, .banner .title .purpose .content span, .purpose .content .header__inner h2, .header__inner .purpose .content h2,
+  .purpose .content .logo, .purpose .content .banner .system-name span, .banner .system-name .purpose .content span, .purpose .content .header__inner h2, .header__inner .purpose .content h2,
   .purpose .content .header__inner h2,
   .header__inner .purpose .content h2,
   .purpose .content .banner .title span,
@@ -1151,7 +1147,7 @@ Stylesheet: 1024px以上のモニタで適用
     padding-right: 20px;
     font-size: 130px;
   }
-  .purpose .content .logo, .purpose .content .banner .title span, .banner .title .purpose .content span, .purpose .content .header__inner h2, .header__inner .purpose .content h2,
+  .purpose .content .logo, .purpose .content .banner .system-name span, .banner .system-name .purpose .content span, .purpose .content .header__inner h2, .header__inner .purpose .content h2,
   .purpose .content .header__inner h2,
   .header__inner .purpose .content h2,
   .purpose .content .banner .title span,
@@ -1161,7 +1157,7 @@ Stylesheet: 1024px以上のモニタで適用
   .features .content .feature i {
     font-size: 90px;
   }
-  .sns .content .slide-img img {
+  .slide .content .slide-img img {
     max-block-size: 280px;
   }
   .fp-slides {
@@ -1197,7 +1193,7 @@ Stylesheet: 1280px以上のモニタで適用
   .banner .title span {
     font-size: 140px;
   }
-  .purpose .content .logo, .purpose .content .banner .title span, .banner .title .purpose .content span, .purpose .content .header__inner h2, .header__inner .purpose .content h2,
+  .purpose .content .logo, .purpose .content .banner .system-name span, .banner .system-name .purpose .content span, .purpose .content .header__inner h2, .header__inner .purpose .content h2,
   .purpose .content .header__inner h2,
   .header__inner .purpose .content h2,
   .purpose .content .banner .title span,
@@ -1207,7 +1203,7 @@ Stylesheet: 1280px以上のモニタで適用
   .features .content .feature i {
     font-size: 100px;
   }
-  .sns .content .slide-img img {
+  .slide .content .slide-img img {
     max-block-size: 350px;
   }
   .fp-slides {
