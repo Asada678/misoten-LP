@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+// class Main start
 class Main {
   constructor() {
     this.tl = gsap.timeline();
@@ -59,7 +60,11 @@ class Main {
   }
 
   _initFullpage() {
-    this.fullpage = new fullpage('#container', {
+    const afterLoad = this._afterLoad.bind(this);
+    const onLeave = this._onLeave.bind(this);
+    const afterSlideLoad = this._afterSlideLoad.bind(this);
+    const onSlideLeave = this._onSlideLeave.bind(this);
+    const options = {
       autoScrolling: true,
       navigation: true,
       anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8',],
@@ -68,46 +73,69 @@ class Main {
       controlArrows: false,
       slidesNavigation: true,
       touchSensitivity: 12,
-      afterLoad: function (origin, destination, direction) {
-        // console.log('origin, destination, direction:', origin, destination, direction);
-        const destinationSectionContents = document.querySelectorAll(`.section[data-anchor=${destination.anchor}] .content`);
-        destinationSectionContents.forEach(el => {
-          el.classList.add('active');
-        })
-        switch (destination.anchor) {
-          case 'section1':
-            tlSection1();
-            break;
-          case 'section3':
-            tlSection3();
-            break;
-          default:
-            break;
-        }
-      },
-      onLeave: function (origin, destination, direction) {
-        const originSectionContents = document.querySelectorAll(`.section[data-anchor=${origin.anchor}] .content`);
-        originSectionContents.forEach(el => {
-          el.classList.remove('active');
-        })
-        switch (origin.anchor) {
-          case 'section3':
-            removeSection3();
-            break;
-          default:
-            break;
-        }
-
-      }
-    });
+      afterLoad,
+      onLeave,
+      afterSlideLoad,
+      onSlideLeave
+    }
+    this.fullpage = new fullpage('#container', options);
   }
 
-  _navAnimation(el, inview) {
-    if (inview) {
-      this.header.classList.remove('triggered');
-    } else {
-      this.header.classList.add('triggered');
+  _addInviewArrowContainer(arrowContainer) {
+    if(!arrowContainer) return;
+    setTimeout(() => {
+      arrowContainer.classList.add('inview');
+    }, 1000);
+  }
+  _removeInviewArrowContainer(arrowContainer) {
+    if(!arrowContainer) return;
+    arrowContainer.classList.remove('inview');
+  }
+  async _afterLoad(origin, destination, direction) {
+    const destinationSectionContents = document.querySelectorAll(`.section[data-anchor=${destination.anchor}] .content`);
+    destinationSectionContents.forEach(el => {
+      el.classList.add('active');
+    })
+    switch (destination.anchor) {
+      case 'section1':
+        await tlSection1();
+        break;
+      case 'section3':
+        await tlSection3();
+        break;
+      default:
+        break;
     }
+    const arrowContainer = document.querySelector(`.section[data-anchor=${destination.anchor}] .arrow-container`);
+    this._addInviewArrowContainer(arrowContainer);
+  }
+  _onLeave(origin, destination, direction) {
+    const originSectionContents = document.querySelectorAll(`.section[data-anchor=${origin.anchor}] .content`);
+    originSectionContents.forEach(el => {
+      el.classList.remove('active');
+    });
+    const arrowContainer = document.querySelector(`.section[data-anchor=${origin.anchor}] .arrow-container`);
+    this._removeInviewArrowContainer(arrowContainer);
+    switch (origin.anchor) {
+      case 'section3':
+        removeSection3();
+        break;
+      default:
+        break;
+    }
+  }
+  _afterSlideLoad(section, origin, destination, direction) {
+    console.log('section, origin, destination, direction:', section, origin, destination, direction);
+    console.log('destination.item:', destination.item);
+    // const activeContent = document.querySelector(destination.item);
+    const arrowContainer = destination.item.querySelector('.arrow-container');
+    this._addInviewArrowContainer(arrowContainer);
+
+  }
+  _onSlideLeave(section, origin, destination, direction) {
+    console.log('section, origin, destination, direction:', section, origin, destination, direction);
+    const arrowContainer = origin.item.querySelector('.arrow-container');
+    this._removeInviewArrowContainer(arrowContainer);
   }
 
   _inviewAnimation(el, inview) {
@@ -155,7 +183,7 @@ class Main {
     // this.observers = new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false });
     this.observers = new ScrollObserver('.appear', this._inviewAnimation);
     this.observers = new ScrollObserver('.section__heading h2', this._inviewAnimation, { once: false });
-    this.observers = new ScrollObserver('.arrow-container', this._inviewAnimation, { once: false });
+    // this.observers = new ScrollObserver('.arrow-container', this._inviewAnimation, { once: false });
   }
 
   _addEvents() {
@@ -186,16 +214,17 @@ class Main {
 
   }
 }
+// class Main end
 
-function tlSection1() {
+async function tlSection1() {
   const tl = gsap.timeline();
-  tl
+  await tl
     .from('.concept .item', { x: '-70px', opacity: 0, duration: .5, stagger: 0.3 }, '+=0.3')
-    .from('.system-name h1', {opacity: 0, duration: 2.5})
+    .from('.system-name h1', { opacity: 0, duration: 2.5 })
 }
-function tlSection3() {
+async function tlSection3() {
   const tl = gsap.timeline();
-  tl
+  await tl
     .from('.description', { y: '300px', opacity: 0, duration: 0.5 }, '+=0')
     .from('.description .item', { y: '70px', opacity: 0, duration: 0.5, stagger: 0.5 }, '+=0')
     // .to('.description', { x: '700px', opacity: 0, duration: 0.5 }, '+=0.5')
@@ -207,7 +236,7 @@ function tlSection3() {
         feature.classList.add('tl-done')
       })
     })
-    // .set('.description', { x: '-700px', opacity: 1, duration: 0.5 }, '+=0')
+  // .set('.description', { x: '-700px', opacity: 1, duration: 0.5 }, '+=0')
 }
 function removeSection3() {
   const features = document.querySelectorAll('.feature');
