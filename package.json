@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cleanup": "npx rimraf ./dist",
+    "dev": "parcel src/index.html",
+    "build": "npm run cleanup && parcel build src/index.html"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/Asada678/misoten-LP/issues"
   },
-  "homepage": "https://github.com/Asada678/misoten-LP#readme"
+  "homepage": "https://github.com/Asada678/misoten-LP#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.27.0"
+  },
+  "dependencies": {
+    "fullpage.js": "^3.0.9",
+    "gsap": "^3.5.1",
+    "pace-js": "^1.0.2",
+    "regenerator-runtime": "^0.13.7",
+    "swiper": "^6.3.4"
+  }
 }

@@ -1,0 +1,25 @@
+.purpose {
+  background-color: rgba(#202020, 0.6);
+  color: $white;
+  &::before {
+    background-image: url(./../../images/purpose.jpg);
+    @extend .section-before;
+    opacity: 0.7;
+  }
+
+  .content {
+    padding: 0 5px;
+
+    .text {
+      padding: 5px 0;
+      background-color: rgba($black, 0.4);
+      border-radius: 20px;
+    }
+
+    .logo {
+      color: $black;
+      font-size: $fsH2;
+      padding-right: 10px;
+    }
+  }
+}

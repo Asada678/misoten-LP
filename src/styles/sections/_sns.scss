@@ -1,0 +1,14 @@
+.sns {
+  background: linear-gradient(
+    315deg,
+    rgba(26, 129, 203, 0.8) 10%,
+    rgba(102, 191, 191, 0.6) 48%,
+    rgba(26, 129, 223, 0.95) 90%
+  );
+  &::before {
+    background-image: url(./../../images/sns.jpg);
+    @extend .section-before;
+  }
+
+ 
+}
