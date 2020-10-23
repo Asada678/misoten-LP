@@ -23,7 +23,7 @@ async function tlSection1() {
   const tl = gsap.timeline();
   await tl
     .from('.concept .item', { x: '-70px', opacity: 0, duration: .5, stagger: 0.3 }, '+=0.3')
-    .from('.system-name h1', { opacity: 0, duration: 2.5 });
+    .from('.system-name h1', { opacity: 0, duration: 2 });
 }
 async function tlSection3() {
   const tl = gsap.timeline();
