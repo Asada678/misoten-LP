@@ -125,15 +125,13 @@ class Main {
     }
   }
   _afterSlideLoad(section, origin, destination, direction) {
-    console.log('section, origin, destination, direction:', section, origin, destination, direction);
-    console.log('destination.item:', destination.item);
-    // const activeContent = document.querySelector(destination.item);
+    // console.log('section, origin, destination, direction:', section, origin, destination, direction);
     const arrowContainer = destination.item.querySelector('.arrow-container');
     this._addInviewArrowContainer(arrowContainer);
 
   }
   _onSlideLeave(section, origin, destination, direction) {
-    console.log('section, origin, destination, direction:', section, origin, destination, direction);
+    // console.log('section, origin, destination, direction:', section, origin, destination, direction);
     const arrowContainer = origin.item.querySelector('.arrow-container');
     this._removeInviewArrowContainer(arrowContainer);
   }
