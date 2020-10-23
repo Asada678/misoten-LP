@@ -196,7 +196,7 @@ function tlSection1() {
 function tlSection3() {
   const tl = gsap.timeline();
   tl
-    .from('.description', { x: '-700px', opacity: 0, duration: 0.5 }, '+=0')
+    .from('.description', { y: '300px', opacity: 0, duration: 0.5 }, '+=0')
     .from('.description .item', { y: '70px', opacity: 0, duration: 0.5, stagger: 0.5 }, '+=0')
     // .to('.description', { x: '700px', opacity: 0, duration: 0.5 }, '+=0.5')
     .from('.feature.red', { x: '-700px', opacity: 0, duration: 0.5 }, '+=0.5')
