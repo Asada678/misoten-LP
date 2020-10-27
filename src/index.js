@@ -41,6 +41,12 @@ async function tlSection3() {
     });
   // .set('.description', { x: '-700px', opacity: 1, duration: 0.5 }, '+=0')
 }
+async function tlSection6() {
+  const tl = gsap.timeline();
+  await tl
+    .from('.section.message p', { y: '70px', opacity: 0, duration: 0.5, stagger: 0.5 }, '+=0.5')
+  // .set('.description', { x: '-700px', opacity: 1, duration: 0.5 }, '+=0')
+}
 function removeSection3() {
   const features = document.querySelectorAll('.feature');
   features.forEach(feature => {
@@ -76,6 +82,9 @@ async function afterLoad(origin, destination, direction) {
       break;
     case 'section3':
       await tlSection3();
+      break;
+    case 'section6':
+      await tlSection6();
       break;
     default:
       break;

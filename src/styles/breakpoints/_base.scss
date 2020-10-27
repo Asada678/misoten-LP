@@ -237,12 +237,13 @@ span {
         opacity: 0;
         visibility: hidden;
         overflow: hidden;
-        transition: 0.8s;
+        transition: 0.8s .3s;
         // display: none;
-
+        
         &.open {
           opacity: 1;
           visibility: visible;
+          transition: 0.8s;
 
           li {
             transform: none;
