@@ -23,7 +23,6 @@ span.number {
   .concept {
     span {
       font-size: 70px;
-
     }
     small {
       font-size: 35px;
@@ -36,7 +35,12 @@ span.number {
   }
 }
 
-.purpose .content .logo, .purpose .content .header__inner h2, .header__inner .purpose .content h2, .purpose .content .banner .system-name span, .banner .system-name .purpose .content span {
+.purpose .content .logo,
+.message .content .logo,
+.purpose .content .header__inner h2,
+.header__inner .purpose .content h2,
+.purpose .content .banner .system-name span,
+.banner .system-name .purpose .content span {
   font-size: 60px;
 }
 
