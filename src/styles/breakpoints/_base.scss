@@ -130,21 +130,20 @@ span {
   width: 100vw;
   height: $headerHeight;
   transition: 0.5s;
-
+  
   &__inner {
     position: relative;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 100%;
     max-width: 1050px;
     margin: 0 auto;
     padding: 0 10px;
 
-    img {
+    .logo-img {
       // width: 60px;
-      height: 60px;
+      height: 50px;
     }
 
     h2 {
