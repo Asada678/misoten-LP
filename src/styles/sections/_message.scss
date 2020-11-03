@@ -1,8 +1,7 @@
 .message {
   .content {
-    padding: 15px 0;
+    padding: 30px 0;
     background-color: $white;
-
     .logo {
       padding-right: 10px;
       font-size: 40px;
@@ -27,8 +26,19 @@
     }
 
     p {
-      margin: 0 !important;
       font-weight: 900 !important;
+    }
+  }
+}
+
+@media (max-height: 375px) {
+  .message {
+    .content {
+      padding: 10px 0;
+
+      p {
+        margin: 0 !important;
+      }
     }
   }
 }
