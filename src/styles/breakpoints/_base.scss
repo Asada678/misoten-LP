@@ -193,7 +193,7 @@ span {
           text-align: center;
           background: linear-gradient(
             135deg,
-            rgba(255, 150, 66, 0.9) 50%,
+            rgba($white, 0.9) 50%,
             rgba(21, 21, 21, 0.9) 50%
           );
           background-size: 200% 200%;
@@ -219,7 +219,7 @@ span {
           width: 42px;
           height: 28px;
           cursor: pointer;
-          transition: 0.5s;
+          transition: 0.3s;
 
           &:hover {
             transform: scale(1.1);
