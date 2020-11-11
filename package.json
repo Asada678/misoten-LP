@@ -20,13 +20,32 @@
   "homepage": "https://github.com/Asada678/misoten-LP#readme",
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "parcel-plugin-custom-dist-structure": "^1.1.16",
     "sass": "^1.27.0"
   },
   "dependencies": {
     "fullpage.js": "^3.0.9",
     "gsap": "^3.5.1",
     "pace-js": "^1.0.2",
+    "parcel": "^1.12.4",
     "regenerator-runtime": "^0.13.7",
     "swiper": "^6.3.4"
+  },
+  "customDistStructure": {
+    "config": {
+      ".js": "js",
+      "images": [
+        ".jpg",
+        ".png"
+      ],
+      ".fileExtension": "folder/in/dist",
+      "folder/in/dist": [
+        ".file",
+        ".extensions"
+      ]
+    },
+    "options": {
+      "development": true
+    }
   }
 }
