@@ -149,6 +149,7 @@ function initFullpage() {
     navigation: true,
     anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8',],
     // navigationTooltips: ['Home', 'Purpose', 'Features', 'Coach', 'SNS', 'Team', 'Technologies', 'Footer'],
+    lockAnchors: true,
     showActiveTooltip: true,
     controlArrows: false,
     slidesNavigation: true,
