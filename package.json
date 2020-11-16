@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "cleanup": "npx rimraf ./dist",
-    "dev": "parcel src/index.html",
-    "prod": "npm run cleanup && parcel build src/index.html"
+    "dev": "parcel src/introduction.html",
+    "dev-en": "parcel src/introduction-en.html",
+    "prod": "npm run cleanup && parcel build src/introduction.html"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>Ever Fit Up</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <script src="https://cdn.jsdelivr.net/npm/viewport-extra@1.0.3/dist/viewport-extra.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/0.7.8/pace.min.js"
+    integrity="sha512-t3TewtT7K7yfZo5EbAuiM01BMqlU2+JFbKirm0qCZMhywEbHZWWcPiOq+srWn8PdJ+afwX9am5iqnHmfV9+ITA=="
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <!-- <h2>EFU</h2> -->
+      <img src="./images/logo-wide.png" alt="LOGO" class="logo-img">
+      <div class="buttons">
+        <a href="https://www.instagram.com/everfitup/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <div class="selected-language">
+          <img src="./images/Japan.jpg" alt="Japan">
+        </div>
+        <ul class="languages">
+          <li class="selected">
+            <a href="./introduction.html">
+              <img src="./images/Japan.jpg" alt="Japan">
+              <span>日本語</span>
+            </a>
+          </li>
+          <li>
+            <a href="./introduction-ko.html">
+              <img src="./images/Korea.jpg" alt="Korea">
+              <span>한국어</span>
+            </a>
+          </li>
+          <li>
+            <a href="./introduction-zh.html">
+              <img src="./images/China.jpg" alt="China">
+              <span>中文</span>
+            </a>
+          </li>
+          <li>
+            <a href="./introduction-en.html">
+              <img src="./images/UK.jpg" alt="UK">
+              <span>English</span>
+            </a>
+          </li>
+          <li>
+            <a href="./introduction-de.html">
+              <img src="./images/Germany.jpg" alt="Germany">
+              <span>Deutsch</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div id="loading-container">
+    <div class="loader">
+      <span></span>
+    </div>
+  </div>
+  <div id="container">
+    <section class="section banner">
+      <div class="content">
+        <div class="concept">
+          <span class="item">
+            <span>あなた</span>
+            <small>の</small>
+          </span>
+          <span class="break first"></span>
+          <span class="item">
+            <span>未来</span>
+            <small>が</small>
+          </span>
+          <span class="break"></span>
+          <span class="item">
+            <span>コーチ</span>
+            <small>に</small>
+            <span>！？</span>
+          </span>
+        </div>
+        <div class="system-name">
+          <h1>
+            <span>Ever</span>
+            <span>Fit</span>
+            <span>Up</span>
+          </h1>
+          <!-- <img src="./images/logo-big.png" alt="LOGO BIG"> -->
+        </div>
+      </div>
+      <div class="arrow-container">
+        <i class="fas fa-long-arrow-alt-down arrow down"></i>
+      </div>
+    </section>
+
+    <section class="section purpose">
+      <div class="section__heading">
+        <h2>目的</h2>
+      </div>
+      <div class="content">
+        <div class="text">
+          <p>
+            <span>「一人だとトレーニングが</span>
+            <span class="break first"></span>
+            <span>続かない...」</span>
+          </p>
+          <p><span class="logo">Ever Fit Up</span> は</p>
+          <p>
+            <span>こんな悩みを抱える人を</span>
+            <span class="break first"></span>
+            <span>支えるアプリです。</span>
+          </p>
+        </div>
+      </div>
+      <div class="arrow-container">
+        <i class="fas fa-long-arrow-alt-down arrow down"></i>
+      </div>
+    </section>
+
+    <section class="section features">
+      <div class="section__heading">
+        <h2>機能</h2>
+      </div>
+      <div class="content">
+        <div class="description">
+          <h2 class="item"><span class="logo">Ever Fit Up</span></h2>
+          <p class="item"><span class="number logo">２</span>つの機能</p>
+        </div>
+        <div class="feature red">
+          <i class="fas fa-user-graduate"></i>
+          <h2>未来コーチ</h2>
+        </div>
+        <div class="feature blue">
+          <h2>SNS</h2>
+          <i class="fas fa-users"></i>
+        </div>
+      </div>
+      <div class="arrow-container">
+        <i class="fas fa-long-arrow-alt-down arrow down"></i>
+      </div>
+    </section>
+
+    <section class="section coach">
+      <div class="section__heading">
+        <h2>未来コーチ</h2>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <div class="text">
+            <h3><span class="number">1</span>. 未来コーチ<small>とは</small></h3>
+            <p>目標値をもとに可視化された、
+              <span class="break"></span>
+              あなたの未来の姿です。</p>
+          </div>
+          <div class="slide-img">
+            <img src="./images/coach.png" alt="coach">
+          </div>
+        </div>
+        <div class="arrow-container">
+          <i class="fas fa-long-arrow-alt-right arrow right"></i>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <div class="text">
+            <h3><span class="number">2</span>. トレーニング指導</h3>
+            <p>未来の自分が諦めないよう<span class="break"></span>励ましてくれる！</p>
+          </div>
+          <div class="slide-img">
+            <img src="./images/teach.jpg" alt="teach">
+          </div>
+        </div>
+        <div class="arrow-container">
+          <i class="fas fa-long-arrow-alt-right arrow right"></i>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <div class="text">
+            <h3><span class="number">3</span>. プランニング</h3>
+            <p>目標から逆算して、最適な<span class="break"></span>トレーニングプランを提案！</p>
+          </div>
+          <div class="slide-img">
+            <img src="./images/planning.jpg" alt="planning">
+          </div>
+        </div>
+        <div class="arrow-container">
+          <i class="fas fa-long-arrow-alt-down arrow down"></i>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section sns">
+      <div class="section__heading">
+        <h2>SNS</h2>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <div class="text">
+            <h3><span class="number">1</span>. 投稿<small>と</small>いいね</h3>
+            <p>毎日の頑張りを投稿しよう！</p>
+          </div>
+          <div class="slide-img">
+            <img src="./images/post.png" alt="post">
+          </div>
+        </div>
+        <div class="arrow-container">
+          <i class="fas fa-long-arrow-alt-right arrow right"></i>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <div class="text">
+            <h3><span class="number">2</span>. 動画配信</h3>
+            <p>離れた友人と一緒に<span class="break"></span>
+              トレーニングしよう！</p>
+          </div>
+          <div class="slide-img">
+            <img src="./images/live.jpg" alt="live">
+          </div>
+        </div>
+        <div class="arrow-container">
+          <i class="fas fa-long-arrow-alt-right arrow right"></i>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <div class="text">
+            <h3><span class="number">3</span>. グループ</h3>
+            <p>仲間を誘って、<span class="break"></span>一緒にトレーニングしよう！</p>
+          </div>
+          <div class="slide-img">
+            <img src="./images/group.jpg" alt="group">
+          </div>
+        </div>
+        <div class="arrow-container">
+          <i class="fas fa-long-arrow-alt-right arrow right"></i>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <div class="text">
+            <h3><span class="number">4</span>. 称号</h3>
+            <p>トレーニングを継続すると<span class="break"></span>称号ゲット！</p>
+          </div>
+          <div class="slide-img">
+            <img src="./images/title.jpg" alt="title">
+          </div>
+        </div>
+        <div class="arrow-container">
+          <i class="fas fa-long-arrow-alt-down arrow down"></i>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section message">
+      <div class="section__heading">
+        <h2>メッセージ</h2>
+      </div>
+      <div class="content">
+        <p>
+          <span class="logo red">未来コーチ</span>
+          <small>と</small>
+          <span class="logo blue">SNS</span>
+        </p>
+        <p><span class="number">２</span>つの軸で</p>
+        <p>あなたの継続を支えます！</p>
+      </div>
+      <div class="arrow-container">
+        <i class="fas fa-long-arrow-alt-down arrow down"></i>
+      </div>
+    </section>
+
+    <section class="section team">
+      <div class="section__heading">
+        <h2>開発チーム</h2>
+      </div>
+      <div class="content">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="leader">リーダー</div>
+                <div class="layer"></div>
+                <div class="text">
+                  <!-- <p></p> -->
+                </div>
+                <div class="img-box">
+                  <img src="./images/no-user.png" alt="">
+                </div>
+                <div class="name">
+                  <img src="./images/Japan.jpg" alt="Japan">
+                  <span>安井 雄飛</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="layer"></div>
+                <div class="text">
+                  <!-- <p></p> -->
+                </div>
+                <div class="img-box">
+                  <img src="./images/no-user.png" alt="">
+                </div>
+                <div class="name">
+                  <img src="./images/Japan.jpg" alt="Japan">
+                  <span>浅田 智哉</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="layer"></div>
+                <div class="text">
+                  <!-- <p></p> -->
+                </div>
+                <div class="img-box">
+                  <img src="./images/no-user.png" alt="">
+                </div>
+                <div class="name">
+                  <img src="./images/Korea.jpg" alt="Korea">
+                  <span>申 現益</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="layer"></div>
+                <div class="text">
+                  <!-- <p></p> -->
+                </div>
+                <div class="img-box">
+                  <img src="./images/no-user.png" alt="">
+                </div>
+                <div class="name">
+                  <img src="./images/Japan.jpg" alt="Japan">
+                  <span>高山 望</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="layer"></div>
+                <div class="text">
+                  <!-- <p></p> -->
+                </div>
+                <div class="img-box">
+                  <img src="./images/no-user.png" alt="">
+                </div>
+                <div class="name">
+                  <img src="./images/Taiwan.jpg" alt="Taiwan">
+                  <span>張 耀文</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="layer"></div>
+                <div class="text">
+                  <!-- <p></p> -->
+                </div>
+                <div class="img-box">
+                  <img src="./images/no-user.png" alt="">
+                </div>
+                <div class="name">
+                  <img src="./images/Japan.jpg" alt="Japan">
+                  <span>芳地 真治</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="layer"></div>
+                <div class="text">
+                  <!-- <p></p> -->
+                </div>
+                <div class="img-box">
+                  <img src="./images/no-user.png" alt="">
+                </div>
+                <div class="name">
+                  <img src="./images/Japan.jpg" alt="Japan">
+                  <span>宮原 永遠</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="layer"></div>
+                <div class="text">
+                  <!-- <p></p> -->
+                </div>
+                <div class="img-box">
+                  <img src="./images/no-user.png" alt="">
+                </div>
+                <div class="name">
+                  <img src="./images/Austria.jpg" alt="Austria">
+                  <span>ルードヴィッヒ<span class="break"></span> フィリップ</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-container">
+        <i class="fas fa-long-arrow-alt-down arrow down"></i>
+      </div>
+    </section>
+
+    <section class="section link">
+      <div class="section__heading">
+        <h2>リンク</h2>
+      </div>
+      <div class="content">
+        <div class="img-box">
+          <img src="./images/logo-big.png" alt="">
+        </div>
+        <div class="link-box">
+          <!-- <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            ご利用<small>は</small>こちら！
+          </a> -->
+          <h2>
+            作成中！
+          </h2>
+        </div>
+      </div>
+      <span class="copyright">
+        ©HAL Osaka Group OH211
+      </span>
+    </section>
+
+    <!-- <section class="section">
+      <div class="section__heading">
+        <h2>Sample</h2>
+      </div>
+      <div class="content">
+      </div>
+    </section> -->
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
